@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_item_trip_report"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/layout_bstIdVrn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textView_vrn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DM GHA 17- 6246"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_marginEnd="4dp"/>
+
+                    <View
+                        android:id="@+id/view_inBetweenBstIdVrn"
+                        android:layout_toEndOf="@+id/textView_vrn"
+                        android:layout_alignTop="@+id/textView_vrn"
+                        android:layout_alignBottom="@+id/textView_vrn"
+                        android:layout_width="2dp"
+                        android:layout_height="0dp"
+                        android:background="@color/black"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/item_textView_bstId"
+                        android:layout_toEndOf="@+id/view_inBetweenBstIdVrn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BST10370"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="4dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_startEndDate"
+                    android:layout_below="@+id/layout_bstIdVrn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imageView_startDateTime"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_start_date"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textView_startDate"
+                        android:layout_toEndOf="@+id/imageView_startDateTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Oct 8, 2021 21:24:56"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="4dp"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imageView_endDateTime"
+                        android:layout_toEndOf="@+id/textView_startDate"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_end_date"
+                        android:layout_marginStart="8dp"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/item_textView_endDate"
+                        android:layout_toEndOf="@+id/imageView_endDateTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Oct 8, 2021 21:24:56"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="4dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_startAddress"
+                    android:layout_below="@+id/layout_startEndDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imageView_startAddress"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_address_from"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textView_startAddress"
+                        android:layout_toEndOf="@+id/imageView_startAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Madhukhali- Nimtolla Road, Bangladesh"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="4dp"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/view_inBetweenStartEndAddress"
+                    android:layout_below="@+id/layout_startAddress"
+                    android:layout_width="2dp"
+                    android:layout_height="10dp"
+                    android:background="@color/black"
+                    android:layout_marginStart="9dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/layout_endAddress"
+                    android:layout_below="@+id/view_inBetweenStartEndAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imageView_endAddress"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_address_to"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textView_endAddress"
+                        android:layout_toEndOf="@+id/imageView_endAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Diabetic Association Medical College Hospital, faridpur"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="4dp"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/view_inBetweenUpperLowerView"
+                    android:layout_below="@+id/layout_endAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/bgAshColor"/>
+
+                <LinearLayout
+                    android:layout_below="@+id/view_inBetweenUpperLowerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/layout_duration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textView_duration_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Duration"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textView_duration_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00:35:47"
+                            android:textSize="14sp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/bgAshColor"/>
+
+                    <LinearLayout
+                        android:id="@+id/layout_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textView_distance_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Distance"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textView_distance_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="26.01 Km"
+                            android:textSize="14sp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/bgAshColor"/>
+
+                    <LinearLayout
+                        android:id="@+id/layout_avg_speed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textView_avg_speed_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Avg Speed"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textView_avg_speed_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="36.01 Km/h"
+                            android:textSize="14sp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_below="@+id/cardView_item_trip_report"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/bgAshColor"/>
+
+    </RelativeLayout>
+
+</layout>

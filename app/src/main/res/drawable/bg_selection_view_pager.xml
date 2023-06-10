@@ -1,0 +1,15 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/bg_app_backdrop"
+        android:top="0dp"
+        android:bottom="0dp"
+        android:left="0dp"
+        android:right="0dp"
+        />
+
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/colorAccentTransparent" />
+        </shape>
+    </item>
+</layer-list>

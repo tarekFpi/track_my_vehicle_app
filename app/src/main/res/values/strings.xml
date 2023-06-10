@@ -1,0 +1,231 @@
+<resources>
+    <string name="app_name">TMV</string>
+    <string name="powered_text">A PRODUCT OF</string>
+
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_analytics">Analytics</string>
+    <string name="title_route">Routes</string>
+    <string name="title_expense">Expenses</string>
+    <string name="title_account">Account</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_analytics_fragment">Hello analytics fragment</string>
+    <string name="label_forget_password"><u>Reset Password</u></string>
+    <string name="label_forget"><u>Request Otp</u></string>
+    <string name="msg_signin_in">Signing in...</string>
+    <string name="msg_hold_on">Hold on</string>
+    <string name="title_error">Error!!</string>
+    <string name="action_ok">OK</string>
+    <string name="action_choose">Choose</string>
+    <string name="label_username">username</string>
+    <string name="label_hit_password">********</string>
+    <string name="action_sign_in">SIGN IN</string>
+    <string name="label_mobile_number">MOBILE NUMBER</string>
+    <string name="label_reset_password">Reset password</string>
+    <string name="label_otp">OTP</string>
+    <string name="label_validate_otp">VALIDATE OTP</string>
+    <string name="label_new_password">NEW PASSWORD</string>
+    <string name="label_confirm_password">CONFIRM PASSWORD</string>
+    <string name="action_set_password">Set Password</string>
+    <string name="label_current_password">CURRENT PASSWORD</string>
+    <string name="action_change_password">Change Password</string>
+    <string name="label_name">NAME</string>
+    <string name="label_email">EMAIL</string>
+    <string name="label_mobile">MOBILE</string>
+    <string name="label_address">ADDRESS</string>
+    <string name="label_billing">Billing</string>
+    <string name="action_pay_bills">PAY BIllS</string>
+    <string name="label_feedback">FEEDBACK</string>
+    <string name="action_my_feedback">MY FEEDBACK</string>
+    <string name="action_send_feedback">SEND FEEDBACK</string>
+    <string name="action_logout">LOGOUT</string>
+    <string name="label_account_information">Account Information</string>
+    <string name="label_select_feedback">Select Feedback</string>
+    <string name="label_other_details">Other / Details</string>
+    <string name="label_add_feedback">ADD FEEDBACK</string>
+    <string name="msg_feedback_list_empty">Feedback list seems empty right now</string>
+    <string name="label_expenses">EXPENSES</string>
+    <string name="action_know_more"><u>Want to know more?</u></string>
+    <string name="msg_drag_the_sidebar_for_scrolling_the_chart">Drag the sidebar for scrolling the chart</string>
+    <string name="label_control">Control</string>
+    <string name="action_remote_engine_disarm">Remote Engine Disarm</string>
+    <string name="msg_remote_engine_disarm_is_off">REMOTE ENGINE DISARM IS OFF</string>
+    <string name="msg_remote_engine_disarm_is_on">REMOTE ENGINE DISARM IS ON</string>
+    <string name="action_hide_seekbar"><u>hide control</u></string>
+    <string name="action_show_seekbar"><u>show control</u></string>
+    <string name="title_hourly_distance">Hourly Report</string>
+    <string name="title_daily_distance">Distance Report</string>
+    <string name="title_daily_engine">Engine Report</string>
+    <string name="title_vehicle_route">Vehicle Route Analytics</string>
+    <string name="title_logout">Logout</string>
+    <string name="label_expenses_create">Expense Create</string>
+    <string name="label_live_map">Monitor</string>
+    <string name="label_vehicles">Vehicles</string>
+    <string name="label_analytics">Analytics</string>
+
+
+    <string name="BackDropBottomSheetBehavior">com.singularity.trackmyvehicle.view.customview.behaviour.BackdropBottomSheetBehavior</string>
+    <string name="BottomSheetBehaviorGoogleMapsLike">com.singularity.trackmyvehicle.view.customview.behaviour.BottomSheetBehaviorGoogleMapsLike</string>
+    <string name="ScrollAwareFABBehavior">com.singularity.trackmyvehicle.view.customview.behaviour.ScrollAwareFABBehavior</string>
+    <string name="MergedAppBarLayoutBehavior">com.singularity.trackmyvehicle.view.customview.behaviour.MergedAppBarLayoutBehavior</string>
+    <string name="ScrollingAppBarLayoutBehavior">com.singularity.trackmyvehicle.view.customview.behaviour.ScrollingAppBarLayoutBehavior</string>
+
+
+    <string name="you_have_3_unread_notification_for_this_vehicle">You have 3 unread notification</string>
+
+
+    <string name="msg_empty_notification_error">Something went wrong. Swipe down to retry.</string>
+    <string name="action_pay_now">Pay Now</string>
+    <string name="label_notification">Notifications</string>
+    <string name="title_pay_bill">Pay Bill</string>
+    <string name="title_support">Help and Support</string>
+    <string name="msg_loading">Loading ...</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="distance">Distance</string>
+    <string name="title_location_report">Location Report</string>
+    <string name="title_monthly_report">Monthly Report</string>
+    <string name="title_trip_report">Trip Report</string>
+    <string name="label_support">Support</string>
+    <string name="label_support_category">Support Category</string>
+    <string name="label_select_support_category">Select Support Category</string>
+    <string name="label_subject">Subject</string>
+    <string name="label_message">Message</string>
+    <string name="label_vehicle">Vehicle</string>
+    <string name="label_select_vehicle">Select Vehicle</string>
+    <string name="create_support_request">CREATE SUPPORT REQUEST</string>
+    <string name="label_call_us">Call Us</string>
+    <string name="label_tmv_lite">TMV - Lite </string>
+    <string name="label_create_support_request">Create Support Request</string>
+    <string name="label_view_support_request">View Support Requests</string>
+    <string name="activate">Activate</string>
+    <string name="activated">ACTIVATED</string>
+
+    <!--Analytics Fragment-->
+    <string name="traveled_distance">Traveled Distance</string>
+    <string name="date_start">24-May-2021</string>
+    <string name="date_end">30-May-2021</string>
+    <string name="date_to">to</string>
+    <string name="date">DATE</string>
+    <string name="day">DAY</string>
+    <string name="vehicle">VEHICLE</string>
+    <string name="km_run">KM RUN</string>
+    <string name="day_name">Sun</string>
+    <string name="vehicle_count">601</string>
+    <string name="km_run_number">58,600.26</string>
+    <string name="km_in_total_number">0</string>
+    <string name="km_in_total">km in total</string>
+    <string name="summery_alerts">Alert Summary</string>
+    <string name="total_trips_over_speed_fence_cross">Total trips, over-speed, fence cross</string>
+    <string name="trips_alert">Trips</string>
+    <string name="speeding_alert">Speeding</string>
+    <string name="fence_out_alert">Fence Out</string>
+    <string name="trips">TRIPS</string>
+    <string name="speeding">SPEEDING</string>
+    <string name="fence_out">FENCE OUT</string>
+    <string name="total_vehicles">0000</string>
+    <string name="total">Total</string>
+    <string name="vehicles">VEHICLES</string>
+    <string name="status_summary">Status summary</string>
+    <string name="moved">Moved</string>
+    <string name="made">Made</string>
+    <string name="traveled">TRAVELLED</string>
+    <string name="km">Kilometer</string>
+    <string name="_7_days">days</string>
+    <string name="last">Last</string>
+    <string name="summary">summary</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="your_week_in_numbers">Your week in numbers</string>
+    <string name="your">Your</string>
+    <string name="week">week</string>
+    <string name="in_numbers">in numbers</string>
+    <string name="total_vehicles_number">Total Vehicles:</string>
+    <string name="_17">17</string>
+    <string name="hello">Hello,</string>
+    <string name="user">User!</string>
+    <string name="km_traveled">Km Traveled</string>
+    <string name="_12_357">0</string>
+    <string name="_239">0</string>
+    <string name="_21">0</string>
+    <string name="over_speed">Overspeed</string>
+    <string name="_122">0</string>
+    <string name="_14">0</string>
+    <string name="_9">0</string>
+    <string name="all_vehicles">ALL VEHICLES</string>
+    <string name="live">LIVE</string>
+    <string name="suspended">SUSPENDED</string>
+    <string name="offline">OFFLINE</string>
+    <string name="sl">SL.</string>
+    <string name="bstid">BSTID</string>
+    <string name="vrn">VRN</string>
+    <string name="safe">SAFE</string>
+    <string name="marginal">MARGINAL</string>
+    <string name="unsafe">UNSAFE</string>
+    <string name="total_alerts">Total Alerts</string>
+
+    <!--Vehicle Route Analytics Activity-->
+    <string name="bst_10244">BST 10244</string>
+    <string name="dm_ga_19_5467">DM GA 19-5467</string>
+    <string name="select_date">Select Date</string>
+    <string name="select_events">Select Events</string>
+    <string name="route_analytics">ROUTE ANALYTICS</string>
+
+    <string name="parking">Parking</string>
+    <string name="sudden_acceleration">Sudden Acceleration</string>
+    <string name="harsh_break">Harsh Break</string>
+    <string name="speed_violation">Speed Violation</string>
+    <string name="engine_start_stop">Engine start/stop</string>
+    <string name="idle_flag">Idle Flag</string>
+    <string name="power_down">Power Down</string>
+    <string name="add_events">Add Events</string>
+
+    <!--Account Activity-->
+    <string name="help_legal"><![CDATA[Help & Legal]]></string>
+    <string name="terms_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="personal_information">Personal Information</string>
+    <string name="name">Name</string>
+    <string name="rayhanul_islam">Rayhanul Islam</string>
+    <string name="email">Email</string>
+    <string name="rayhan123_gmail_com">rayhan123@gmail.com</string>
+    <string name="contact_no">Contact No.</string>
+    <string name="_8801800012443">+8801800012443</string>
+    <string name="authentication">Authentication</string>
+    <string name="sign_in_name">Sign In Name</string>
+    <string name="rayhan">rayhan</string>
+    <string name="password">Password</string>
+    <string name="_1234567890">1234567890</string>
+    <string name="support_ticket">Support Ticket</string>
+    <string name="helpline">Helpline</string>
+    <string name="refund_policies">Refund Policies</string>
+    <string name="logout">Logout</string>
+    <string name="save">Save</string>
+    <string name="app_version">App Version</string>
+
+    <!--Vehicle Monitoring Activity-->
+    <string name="ambulance">ambulance</string>
+    <string name="barge">barge</string>
+    <string name="bike">bike</string>
+    <string name="bus">bus</string>
+    <string name="car">car</string>
+    <string name="cng">cng</string>
+    <string name="wheelerlpg">3wheeler lpg</string>
+    <string name="launch">launch</string>
+    <string name="lorry">lorry</string>
+    <string name="micro_bus">micro_bus</string>
+    <string name="micro_bus_two">micro bus</string>
+    <string name="pick_up">pick_up</string>
+    <string name="pick_up2">pick up</string>
+    <string name="road_tanker">road_tanker</string>
+    <string name="ship">ship</string>
+    <string name="suv">suv</string>
+    <string name="van">van</string>
+    <string name="default_car">default</string>
+    <string name="text_notification_turned_off">You\'ll not be receiving push notifications in your phone until notifications is turned on again</string>
+    <string name="text_notification_turned_on">You\'ll now be receiving push notifications in your phone until notifications is turned off again</string>
+    <string name="notifications_turned_off_title">Notifications turned off.</string>
+    <string name="notifications_turned_on_title">Notifications turned on.</string>
+
+</resources>

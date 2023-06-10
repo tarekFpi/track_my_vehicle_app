@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/viewNotificationContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="?attr/selectableItemBackground"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/small"
+        app:cardElevation="@dimen/small">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_marginTop="4dp"
+                android:id="@+id/viewNotificationImg"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/ic_notification" />
+
+            <TextView
+                android:id="@+id/tvNotificationTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/small"
+                android:layout_marginRight="@dimen/small"
+                android:layout_toStartOf="@+id/containerCause"
+                android:layout_toLeftOf="@+id/containerCause"
+                android:layout_toEndOf="@+id/viewNotificationImg"
+                android:layout_toRightOf="@+id/viewNotificationImg"
+                android:text="Notification Name"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvNotificationDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvNotificationTitle"
+                android:layout_marginLeft="@dimen/small"
+                android:layout_marginTop="@dimen/tiny"
+                android:layout_marginRight="@dimen/small"
+                android:layout_marginBottom="@dimen/tiny"
+                android:layout_toStartOf="@+id/containerCause"
+                android:layout_toLeftOf="@+id/containerCause"
+                android:layout_toEndOf="@+id/viewNotificationImg"
+                android:layout_toRightOf="@+id/viewNotificationImg"
+                android:text="16, Jan, 2020"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvNotificationDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvNotificationDate"
+                android:layout_marginLeft="@dimen/small"
+                android:layout_marginRight="@dimen/small"
+                android:layout_toEndOf="@+id/viewNotificationImg"
+                android:layout_toRightOf="@+id/viewNotificationImg"
+                android:ellipsize="end"
+                android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                android:textSize="14sp" />
+
+            <com.skydoves.doublelift.DoubleLiftLayout
+                android:id="@+id/containerCause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:background="#4CAF50"
+                app:doubleLift_animation="bounce"
+                app:doubleLift_autoExpand="false"
+                app:doubleLift_cornerRadius="4dp"
+                app:doubleLift_foldedHeight="12dp"
+                app:doubleLift_foldedWidth="50dp"
+                app:doubleLift_horizontalDuration="400"
+                app:doubleLift_startOrientation="horizontal"
+                app:doubleLift_verticalDuration="300">
+
+                <TextView
+                    android:id="@+id/txtCause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingStart="8dp"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="4dp"
+                    android:text="Unread"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+
+            </com.skydoves.doublelift.DoubleLiftLayout>
+
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

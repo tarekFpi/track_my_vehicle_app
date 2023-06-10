@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="4dp"
+    tools:weightSum="2"
+    tools:orientation="horizontal"
+    android:orientation="vertical">
+
+    <com.google.android.material.button.MaterialButton
+        tools:layout_weight="1"
+        android:id="@+id/btnReport"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        tools:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:paddingStart="8dp"
+        android:paddingLeft="8dip"
+        android:paddingTop="8dp"
+        android:paddingEnd="8dp"
+        android:paddingRight="8dip"
+        android:paddingBottom="8dp"
+        android:text="SUBSCRIPTION"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:iconTint="@color/black"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="16dp"
+        app:icon="@drawable/dashboard"
+        app:iconPadding="4dp"
+        app:iconSize="16dp"
+        app:strokeColor="@color/colorReportButtonStroke"
+        app:strokeWidth="2dp"/>
+
+    <!--android:paddingStart="4dp"
+        android:paddingLeft="4dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="8dp"
+        android:paddingRight="8dp"-->
+
+</LinearLayout>

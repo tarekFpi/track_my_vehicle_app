@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/screenIntroduction"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_alignBottom="@+id/vehicleSelectionToolbarView"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/img_car_dashboard" />
+
+        <View
+            android:layout_alignBottom="@+id/vehicleSelectionToolbarView"
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:alpha="0.80"
+            android:background="@color/colorPrimary"
+            android:elevation="0dp" />
+
+        <com.singularity.trackmyvehicle.view.customview.VehicleSelectionToolbarView
+            android:id="@+id/vehicleSelectionToolbarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:vst_back_drawable="@drawable/ic_close"
+            app:vst_change_vehicle_drawable="@drawable/ic_arrow_dorp_down_wapper"
+            tools:vst_vehicle_name="BST1234" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/banner"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingEnd="@dimen/activity_horizontal_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:paddingTop="48dp">
+
+            <ImageView
+                android:id="@+id/imgStatus"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:padding="16dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/img_locked" />
+
+            <Switch
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:id="@+id/switchRemoteEngineDisarm"
+                style="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/msg_remote_engine_disarm_is_off"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnRefresh"
+                style="@style/ButtonRoundedPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:text="REFRESH"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/banner"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/card_background"
+            android:elevation="4dp"
+            android:paddingBottom="8dp"
+            android:paddingEnd="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:text="Remote Engine Disarm" />
+    </RelativeLayout>
+</RelativeLayout>

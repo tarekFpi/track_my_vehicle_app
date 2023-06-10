@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--<View
+        android:id="@+id/view_rowTitle"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>-->
+
+    <LinearLayout
+        android:id="@+id/layout_rowTitleValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:weightSum="4">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_dateValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/date_start"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_dayOrTripsValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/day_name"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_vehicleCountOrSpeedingValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/vehicle_count"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_kmRunOrFenceOutValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/km_run_number"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</LinearLayout>

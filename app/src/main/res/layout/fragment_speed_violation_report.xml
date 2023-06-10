@@ -1,0 +1,221 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragmentSpeedViolationReport"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/containerVehicleDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/containerCard"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/containerCard"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/img_car_dashboard" />
+
+        <View
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/containerCard"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/containerCard"
+            android:alpha="0.80"
+            android:background="@color/colorPrimary"
+            android:elevation="2dp" />
+
+        <RelativeLayout
+            android:id="@+id/containerCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:elevation="12dp"
+            tools:showIn="@layout/activity_home">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/containerVehicleInfo"
+                style="@style/DefaultSectionTagStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/card_background"
+                android:elevation="2dp"
+                app:cardBackgroundColor="@color/white"
+                app:contentPaddingRight="0dp"
+                app:contentPaddingTop="0dp"
+
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingEnd="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="16dp">
+
+
+                    <ImageView
+                        android:id="@+id/imgVehicle"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/img_halo_circle"
+                        android:src="@drawable/img_car" />
+
+                    <LinearLayout
+                        android:id="@+id/containerVehicleNames"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/imgVehicle"
+                        android:layout_toRightOf="@+id/imgVehicle"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:focusable="true">
+
+                        <TextView
+                            android:id="@+id/txtVehicleName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Loading ..."
+                            android:textAllCaps="true"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textStyle="bold"
+                            tools:text="BST1234" />
+
+                        <TextView
+                            android:id="@+id/txtVehicleTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="Loading ..."
+                            android:textColor="@color/colorTextSecondary"
+                            tools:text="DHAKA METRO GA 1234 5678" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/txtDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/chartContainer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="-32dp"
+        android:background="@drawable/card_background"
+        android:clickable="true"
+        android:drawableEnd="@drawable/ic_arrow_dorp_down_wapper"
+        android:drawableRight="@drawable/ic_arrow_dorp_down_wapper"
+        android:elevation="4dp"
+        android:focusable="true"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:paddingEnd="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        tools:text="23rd March" />
+
+
+    <RelativeLayout
+        android:id="@+id/chartContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/containerVehicleDetails"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp">
+
+        <RelativeLayout
+            android:id="@+id/speedList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    tools:listitem="@layout/item_speed_violations"
+                    android:id="@+id/speedReportList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible" />
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            <LinearLayout
+                android:id="@+id/speedEmptyList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/img_races" />
+
+                <TextView
+
+                    android:textAlignment="center"
+                    android:id="@+id/description"
+                    style="@style/Base.TextAppearance.AppCompat.Large"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:scrollHorizontally="true"
+                    android:text="No Speed violations for this month"
+                    android:textColor="@color/colorTextPrimary" />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

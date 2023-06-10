@@ -1,0 +1,335 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentDistanceReport"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/containerVehicleDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/bottomView"
+            android:layout_alignBottom="@+id/bottomView"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/img_car_dashboard"/>
+
+        <!--<View
+            android:id="@+id/bottomView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/containerToolbar" />-->
+
+        <View
+            android:id="@+id/bottomView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/layout_totalDistance"/>
+
+        <View
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/bottomView"
+            android:layout_alignBottom="@+id/bottomView"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:alpha="0.80"
+
+            android:background="@color/colorPrimary" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/containerToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp">
+
+                    <ImageView
+                        android:id="@+id/imgClose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="8dp"
+                        android:tint="@color/black"
+                        app:srcCompat="@drawable/ic_close" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/containerMonthAndYear"
+                        android:layout_toEndOf="@id/imgClose"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txtCurrentBstId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:paddingStart="16dp"
+                            android:paddingLeft="16dp"
+                            android:paddingEnd="16dp"
+                            android:paddingRight="16dp"
+                            android:text="All Vehicle"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/containerMonthAndYear"
+                        android:layout_width="48dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:orientation="vertical"
+                        android:layout_centerVertical="true">
+
+                        <TextView
+                            android:id="@+id/txtMonth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            tools:text="JAN" />
+
+                        <TextView
+                            android:id="@+id/txtYear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtMonth"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="-3dp"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            tools:text="2020"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:id="@+id/layout_totalDistance"
+            android:layout_below="@+id/containerToolbar"
+            android:layout_alignStart="@+id/containerToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Distance"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="8dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView_totalDistance_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12357 km"
+                android:textColor="@color/blackTmvWhiteRvtRal"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:background="@drawable/bg_rectangle_fill_color_primary"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/layout_totalDistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_ash_border"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp">
+
+            <EditText
+                android:id="@+id/etSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:drawableStart="@drawable/ic_search_wapper"
+                android:hint="Search... "
+                android:inputType="text"
+                android:background="@null"
+                android:padding="4dp"
+                android:maxLines="1"
+                android:lines="1"
+                android:singleLine="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/chartContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/containerVehicleDetails"
+        >
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="end"
+            android:layout_margin="4dp"
+            android:indeterminate="true"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/txtEmptyText"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:text="No report available"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView_titleBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/layout_rowTitleValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textView_sl"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="SL"
+                        android:textSize="16sp"
+                        android:textColor="@color/LabelTextAshColor"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:paddingStart="16dp"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtBstId"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="BSTID"
+                        android:textSize="16sp"
+                        android:textColor="@color/LabelTextAshColor"
+                        android:layout_weight="2"
+                        android:gravity="start"
+                        android:paddingEnd="8dp"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textView_vrn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="VRN"
+                        android:textSize="16sp"
+                        android:textColor="@color/LabelTextAshColor"
+                        android:layout_weight="2"
+                        android:gravity="start"
+                        android:paddingEnd="8dp"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtDistance"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="DISTANCE"
+                        android:textSize="16sp"
+                        android:textColor="@color/LabelTextAshColor"
+                        android:layout_weight="2"
+                        android:gravity="start"
+                        android:paddingEnd="8dp"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefreshLayout"
+                android:layout_below="@+id/cardView_titleBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <!--<androidx.recyclerview.widget.RecyclerView
+                tools:visibility="gone"
+                tools:listitem="@layout/item_engine_timeline"
+                android:id="@+id/rvEngineOfTimeLine"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />-->
+
+                <androidx.recyclerview.widget.RecyclerView
+                    tools:visibility="gone"
+                    android:id="@+id/rvEngineOfTimeLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/item_monthly_distance_table" />
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

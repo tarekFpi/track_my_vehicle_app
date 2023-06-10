@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <data>
+        <import type="android.view.View"/>
+
+        <variable
+            name="motionStateItem"
+            type="com.singularity.trackmyvehicle.model.apiResponse.v3.VehicleRouteTerminalData.VehicleRouteSuccessResponse.VehicleRouteMotionState"/>
+
+    </data>
+    
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:padding="4dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="4dp"
+            app:cardBackgroundColor="@{motionStateItem.modifiedColor()}">
+
+            <View
+                android:id="@+id/view_color"
+                android:layout_width="20dp"
+                android:layout_height="8dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_itemName"
+            android:layout_below="@+id/cardView_color"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{motionStateItem.caption}"
+            android:textSize="10sp"
+            android:textColor="@color/analyticsVehicleSeparatorColor"
+            android:padding="4dp"/>
+        
+    </RelativeLayout>
+
+</layout>

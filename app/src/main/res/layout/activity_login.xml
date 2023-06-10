@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:id="@+id/relative_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_app_backdrop">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:alpha="0.85"
+        android:background="@color/colorAppBackground" />
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/powered"
+        android:layout_alignParentTop="true"
+        android:isScrollContainer="false"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context="com.singularity.trackmyvehicle.view.activity.LoginActivity">
+
+
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:minHeight="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_app_logo"
+                android:layout_marginTop="40dp"/>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgLogo"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/card_background"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:paddingBottom="16dp"
+                android:paddingEnd="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingStart="16dp"
+                android:paddingTop="16dp">
+
+                <EditText
+                    android:id="@+id/etUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_account_lg_wapper"
+                    android:drawablePadding="8dp"
+                    android:drawableStart="@drawable/ic_account_lg_wapper"
+                    android:ems="10"
+                    android:hint="@string/label_username"
+                    android:inputType="textNoSuggestions"
+                    android:textSize="22sp" />
+                <!--android:drawableLeft="@drawable/ic_account_lg_wapper"
+                android:drawablePadding="8dp"
+                android:drawableStart="@drawable/ic_account_lg_wapper"
+                android:ems="10"
+                android:hint="@string/label_username"
+                android:inputType="textNoSuggestions"-->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:hintAnimationEnabled="false"
+                    app:hintEnabled="false"
+                    style="@style/Widget.Design.TextInputLayout"
+                    app:endIconMode="password_toggle">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_lock_wapper"
+                        android:drawablePadding="8dp"
+                        android:drawableStart="@drawable/ic_lock_wapper"
+                        android:ems="10"
+                        android:hint="@string/label_hit_password"
+                        android:inputType="textPassword"
+                        android:textSize="22sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <CheckBox
+                    android:id="@+id/saveLoginCheckBox"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Remember Password?"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"/>
+
+                <Button
+                    android:id="@+id/btnLogin"
+                    style="@style/ButtonPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/action_sign_in" />
+
+                <TextView
+                    android:id="@+id/txtForgetPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/label_forget_password"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtKnowMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="@string/action_know_more"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/powered"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/powered_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/powered_text"
+            android:textSize="12sp"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/powered_logo"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_bondstein"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/txtVersionNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Version 1.0.0"
+            android:textSize="8sp"
+            android:gravity="end" />
+        <!--android:textAlignment="viewEnd"-->
+    </LinearLayout>
+</RelativeLayout>
+

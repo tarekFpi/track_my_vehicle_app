@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/blur_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:clickable="true"
+        android:focusable="true"
+        android:contentDescription="@null"
+        android:fitsSystemWindows="true"
+        android:src="@drawable/blur_map"/>
+
+    <ImageButton
+        android:id="@+id/suspendMaintenceCloseBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_close" />
+
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:clickable="false"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:text="NEED MAINTENANCE"
+            android:textAlignment="center"
+            android:textSize="12dp"
+            android:padding="8dp"
+            android:textAllCaps="false"
+            android:textColor="#EDE8E8"
+            app:cornerRadius="5dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/roboto_regular_1"
+            android:text="Your vehicle is offline"
+            android:textAlignment="center"
+            android:textColor="#3D3D40"
+            android:textSize="18dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_SuspendedTitle"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/roboto_light_0"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Your vehicle is offline and cannot show live location. For more information, please call our help center."
+            android:textAlignment="center"
+            android:textColor="#292828"
+            android:textSize="18sp" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/SuspendedMantenace_callbtn"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:layout_gravity="center_horizontal"
+            android:paddingStart="10dp"
+            android:backgroundTint="#03A9F4"
+            android:paddingEnd="10dp"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:text="Call Help Center"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#ECE2E2"
+            app:cornerRadius="10dp" />
+    </LinearLayout>
+</RelativeLayout>

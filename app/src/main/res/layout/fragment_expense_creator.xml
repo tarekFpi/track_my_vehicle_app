@@ -1,0 +1,197 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentExpenseCreator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.singularity.trackmyvehicle.view.fragment.ExpenseCreatorFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/img_car_dashboard" />
+
+    <View
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:alpha="0.80"
+        android:background="@color/colorPrimary"
+        android:elevation="2dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/banner">
+
+        <androidx.cardview.widget.CardView
+            style="@style/DefaultCardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin">
+
+                <TextView
+                    android:id="@+id/txtBdt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:inputType="numberDecimal"
+                    android:padding="8dp"
+                    android:text="BDT "
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="32sp" />
+
+                <EditText
+                    android:id="@+id/editAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/txtBdt"
+                    android:layout_toRightOf="@+id/txtBdt"
+                    android:gravity="top"
+                    android:inputType="numberDecimal"
+                    android:padding="8dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="32sp"
+                    tools:text="23000" />
+
+                <View
+                    android:id="@+id/amountSeparator"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/editAmount"
+                    android:layout_marginBottom="22dp"
+                    android:background="#d2d2d2" />
+
+                <ImageView
+                    android:id="@+id/ic_wallet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/amountSeparator"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    app:srcCompat="@drawable/ic_wallet" />
+
+                <TextView
+                    android:id="@+id/txtExpenseHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/amountSeparator"
+                    android:layout_marginBottom="8dp"
+                    android:layout_toRightOf="@+id/ic_wallet"
+                    android:background="?attr/selectableItemBackground"
+                    android:text="Mobile"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="24sp" />
+
+                <View
+                    android:id="@+id/expenseHeaderSeparator"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/txtExpenseHeader"
+                    android:layout_alignStart="@id/txtExpenseHeader"
+                    android:layout_alignLeft="@id/txtExpenseHeader"
+                    android:layout_marginBottom="16dp"
+                    android:background="#d2d2d2" />
+
+                <ImageView
+                    android:id="@+id/ic_note"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/expenseHeaderSeparator"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    app:srcCompat="@drawable/ic_note" />
+
+                <EditText
+                    android:id="@+id/editDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/expenseHeaderSeparator"
+                    android:layout_marginBottom="8dp"
+                    android:layout_toRightOf="@+id/ic_note"
+                    android:gravity="top"
+                    android:minLines="2"
+                    android:paddingTop="0dp"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="20sp"
+                    tools:text="For Gas" />
+
+                <TextView
+                    android:id="@+id/labelVehicle"
+                    style="@style/DefaultLabelStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/editDescription"
+                    android:text="@string/label_vehicle"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/btnSelectVehicle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelVehicle"
+                    android:layout_marginBottom="8dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:text="@string/label_select_vehicle"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="27sp"
+                    tools:text="@string/label_select_vehicle" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+
+
+    <androidx.cardview.widget.CardView
+        style="@style/DefaultSectionTagStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/banner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD EXPENSE" />
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabSaveExpense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="72dp"
+        android:tint="@color/fabForegroundColor"
+        app:backgroundTint="@color/fabBackgroundColor"
+        app:elevation="8dp"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/ic_save"
+        tools:showIn="@layout/activity_home" />
+
+</RelativeLayout>

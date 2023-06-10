@@ -1,0 +1,19 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">32dp</dimen>
+    <dimen name="activity_vertical_margin">32dp</dimen>
+    <dimen name="bottom_sheet_peek_height">192dp</dimen>
+    <dimen name="viewpager_next_item_visible">100dp</dimen>
+    <dimen name="viewpager_current_item_horizontal_margin">80dp</dimen>
+    <dimen name="small">4dp</dimen>
+    <dimen name="medium">16dp</dimen>
+    <dimen name="text_medium">16sp</dimen>
+    <dimen name="notification_text_title">14sp</dimen>
+    <dimen name="tiny">2dp</dimen>
+    <dimen name="text_notification_date">12sp</dimen>
+    <dimen name="action_bar_size">80dp</dimen>
+    <dimen name="clock_stroke_width">2dp</dimen>
+
+    <dimen name="vehicle_unselected_height">60dp</dimen>
+    <dimen name="vehicle_selected_height">68dp</dimen>
+</resources>

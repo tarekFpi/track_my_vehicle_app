@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.AccountActivity"
+    android:orientation="vertical"
+    android:background="@color/bgAshColor">
+
+    <RelativeLayout
+        android:id="@+id/layout_profile_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageView_bg_profile_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bg_profile_image"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageView_profile_image"
+            android:layout_below="@+id/imageView_bg_profile_image"
+            android:layout_centerHorizontal="true"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:padding="5dp"
+            app:strokeWidth="2dp"
+            app:strokeColor="@color/colorPrimary"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+            app:srcCompat="@drawable/ic_app_logo"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="-92dp"
+            android:background="@color/colorPrimary"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageView_upload_image"
+            android:layout_below="@+id/imageView_bg_profile_image"
+            android:layout_alignEnd="@+id/imageView_profile_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="-4dp"
+            android:src="@drawable/ic_image_upload"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/personal_information"
+                    android:textSize="16sp"
+                    android:textColor="@color/LabelTextAshColor"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="14dp"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="4dp"
+                    android:background="@color/white"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textView_label_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/name"
+                        android:textColor="@color/LabelTextAshColor"
+                        android:background="@color/white"
+                        android:paddingStart="32dp"
+                        android:paddingEnd="4dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="4dp"
+                        android:layout_marginTop="4dp"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textView_value_name"
+                        android:layout_below="@+id/textView_label_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rayhanul_islam"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:background="@color/white"
+                        android:paddingStart="32dp"
+                        android:paddingEnd="68dp"
+                        android:paddingBottom="8dp"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imageView_editName"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_edit_name"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignTop="@+id/textView_label_name"
+                        android:layout_alignBottom="@+id/textView_value_name"
+                        android:layout_marginEnd="40dp"
+                        android:padding="10dp"/>
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/email"
+                    android:textColor="@color/LabelTextAshColor"
+                    android:background="@color/white"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="4dp"
+                    android:layout_marginTop="2dp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rayhan123_gmail_com"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:background="@color/white"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="4dp"
+                    android:paddingBottom="8dp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contact_no"
+                    android:textColor="@color/LabelTextAshColor"
+                    android:background="@color/white"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="4dp"
+                    android:layout_marginTop="2dp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView_MobileNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_8801800012443"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:background="@color/white"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="4dp"
+                    android:paddingBottom="8dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/authentication"
+                    android:textSize="16sp"
+                    android:textColor="@color/LabelTextAshColor"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="14dp"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="4dp"
+                    android:background="@color/white"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sign_in_name"
+                    android:textColor="@color/LabelTextAshColor"
+                    android:background="@color/white"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="4dp"
+                    android:layout_marginTop="2dp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView_signInName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rayhan"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:background="@color/white"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="4dp"
+                    android:paddingBottom="8dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textView_label_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/password"
+                        android:textColor="@color/LabelTextAshColor"
+                        android:background="@color/white"
+                        android:paddingStart="32dp"
+                        android:paddingEnd="4dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="4dp"
+                        android:layout_marginTop="2dp"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textView_value_password"
+                        android:layout_below="@+id/textView_label_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_1234567890"
+                        android:inputType="textPassword"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:background="@color/white"
+                        android:paddingStart="32dp"
+                        android:paddingEnd="4dp"
+                        android:paddingBottom="8dp"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imageView_editPassword"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_edit_name"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignTop="@+id/textView_label_password"
+                        android:layout_alignBottom="@+id/textView_value_password"
+                        android:layout_marginEnd="40dp"
+                        android:padding="10dp"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/help_legal"
+                    android:textSize="16sp"
+                    android:textColor="@color/LabelTextAshColor"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="14dp"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="4dp"
+                    android:background="@color/white"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView_supportTicket"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/support_ticket"
+                    android:textColor="@color/valueTextAshColor"
+                    android:textSize="14sp"
+                    android:background="@color/white"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:layout_marginTop="4dp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView_helpLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/helpline"
+                    android:textColor="@color/valueTextAshColor"
+                    android:textSize="14sp"
+                    android:background="@color/white"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:layout_marginTop="2dp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView_termsAndConditions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/terms_conditions"
+                    android:textColor="@color/valueTextAshColor"
+                    android:textSize="14sp"
+                    android:background="@color/white"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:layout_marginTop="2dp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView_refundPolicies"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/refund_policies"
+                    android:textColor="@color/valueTextAshColor"
+                    android:textSize="14sp"
+                    android:background="@color/white"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:layout_marginTop="2dp"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView_logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/logout"
+                    android:textColor="@color/valueTextAshColor"
+                    android:textSize="16sp"
+                    android:background="@color/white"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:layout_marginTop="10dp"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_logout"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignTop="@+id/textView_logout"
+                    android:layout_alignBottom="@+id/textView_logout"
+                    android:layout_marginEnd="40dp"
+                    android:padding="10dp"/>
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView_versionName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_version"
+                android:textSize="14sp"
+                android:textColor="@color/LabelTextAshColor"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="20dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

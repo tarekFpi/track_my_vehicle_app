@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+
+        <variable
+            name="vehicleRouteAnalyticsViewModel"
+            type="com.singularity.trackmyvehicle.viewmodel.VehicleRouteAnalyticsViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/layout_view_vehicle_route_analytics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/cardView_upperView"
+            android:layout_alignBottom="@+id/cardView_upperView"
+            android:layout_marginTop="10dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView_backButton"
+                android:layout_width="?actionBarSize"
+                android:layout_height="?actionBarSize"
+                android:padding="12dp"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                app:tint="@color/black"
+                android:visibility="gone"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView_crossButton"
+                android:layout_width="?actionBarSize"
+                android:layout_height="?actionBarSize"
+                android:padding="12dp"
+                app:srcCompat="@drawable/ic_cancel_black"
+                app:tint="@color/colorPrimary"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_upperView"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            style="@style/DefaultSectionTagStyle"
+            app:cardCornerRadius="10dp"
+            android:elevation="2dp"
+            app:cardBackgroundColor="@color/analyticsVehicleRouteIconColor"
+            android:visibility="invisible">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView_upperView_bstid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="BST 10244"
+                    android:textColor="@color/bst_id_title_color"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView_upperView_registrationNumber"
+                    android:layout_below="@+id/textView_upperView_bstid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="DM GA 195464"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentBottom="true">
+
+            <RelativeLayout
+                android:id="@+id/layout_selectedDateEvents"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_selectedDateEvent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/DefaultSectionTagStyle"
+                    app:cardCornerRadius="10dp"
+                    android:elevation="2dp"
+                    app:cardBackgroundColor="@color/analyticsVehicleRouteCardBgColor">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp">
+
+                        <RelativeLayout
+                            android:id="@+id/layout_car_bstId"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/imageView_car"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:src="@drawable/ic_vehicle"
+                                app:tint="@color/analyticsVehicleRouteIconColor"
+                                android:layout_centerVertical="true"/>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textView_bstId"
+                                android:layout_toEndOf="@+id/imageView_car"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/bst_10244"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/analyticsVehicleselectDateColor"
+                                android:layout_marginStart="10dp"/>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textView_carRegistrationNumber"
+                                android:layout_toEndOf="@+id/imageView_car"
+                                android:layout_below="@+id/textView_bstId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/dm_ga_19_5467"
+                                android:textSize="14sp"
+                                android:textColor="@color/commonTextColor"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginBottom="4dp"/>
+
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/separator_horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@color/colorPrimary"
+                            android:alpha=".1"
+                            android:layout_below="@+id/layout_car_bstId"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textView_selectDate"
+                            android:layout_below="@+id/separator_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/select_date"
+                            android:textColor="@color/analyticsVehicleRouteSelectDateEventColor"
+                            android:layout_marginTop="10dp"/>
+
+                        <LinearLayout
+                            android:layout_below="@+id/textView_selectDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_alignStart="@+id/textView_selectDate"
+                            android:layout_alignEnd="@+id/separator_vertical"
+                            android:layout_alignTop="@+id/textView_selectDate"
+                            android:layout_alignBottom="@+id/separator_vertical"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/layout_date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:background="@drawable/bg_date_red_border"
+                                android:layout_marginTop="20dp">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/textView_day"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="23"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/colorPrimary"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"/>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/textView_month"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Aug"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/colorPrimary"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginBottom="5dp"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/separator_vertical"
+                            android:layout_below="@+id/separator_horizontal"
+                            android:layout_width="1dp"
+                            android:layout_height="120dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@color/colorPrimary"
+                            android:alpha=".4"
+                            android:layout_marginTop="10dp"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textView_events"
+                            android:layout_below="@+id/separator_horizontal"
+                            android:layout_toEndOf="@+id/separator_vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/select_events"
+                            android:textColor="@color/analyticsVehicleRouteSelectDateEventColor"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="10dp"/>
+
+                        <LinearLayout
+                            android:layout_below="@+id/textView_selectDate"
+                            android:layout_alignStart="@+id/separator_vertical"
+                            android:layout_alignEnd="@+id/separator_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:background="@drawable/bg_date_red_border">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/imageView_events"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    app:srcCompat="@drawable/ic_event"
+                                    app:tint="@color/colorPrimary"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:padding="4dp"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_routeAnalytics"
+                    android:layout_below="@+id/cardView_selectedDateEvent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/DefaultSectionTagStyle"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp"
+                    app:cardCornerRadius="10dp"
+                    android:elevation="2dp"
+                    app:cardBackgroundColor="@color/colorPrimary">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:text="@string/route_analytics"
+                            android:textSize="18sp"
+                            android:textColor="@color/analyticsButtonSpecificColor"
+                            android:layout_centerHorizontal="true"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_eventsItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/layout_aboveSeekbarDesign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/layout_eventItem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/cardView_info"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="8dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardView_eventItem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="10dp"
+                            android:elevation="2dp"
+                            app:cardBackgroundColor="@color/white">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/recyclerView_motionState"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                    tools:listitem="@layout/vehicle_route_motion_state_item"/>
+
+                            </LinearLayout>
+
+
+
+                        </androidx.cardview.widget.CardView>
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imageView_cancel"
+                        android:layout_toStartOf="@+id/cardView_info"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        app:srcCompat="@drawable/ic_cancel_black"
+                        app:tint="@color/analyticsVehicleRouteIconColor"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView_info"
+                        android:layout_toStartOf="@+id/cardView_event"
+                        android:layout_alignTop="@+id/layout_eventItem"
+                        android:layout_alignBottom="@+id/layout_eventItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardBackgroundColor="@color/white">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/info_button"
+                            android:padding="8dp"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView_event"
+                        android:layout_toStartOf="@+id/cardView_dayNightMode"
+                        android:layout_alignTop="@+id/layout_eventItem"
+                        android:layout_alignBottom="@+id/layout_eventItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardBackgroundColor="@color/white">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/ic_event"
+                            app:tint="@color/colorPrimary"
+                            android:padding="8dp"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView_dayNightMode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignTop="@+id/layout_eventItem"
+                        android:layout_alignBottom="@+id/layout_eventItem"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardBackgroundColor="@color/analyticsVehicleRouteNightModeBgColor">
+
+                        <RelativeLayout
+                            android:id="@+id/layout_dayNightMode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardView_dayMode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="10dp"
+                                android:elevation="0dp"
+                                app:cardBackgroundColor="@color/analyticsVehicleRouteIconColor">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    app:srcCompat="@drawable/ic_day_mode"
+                                    android:padding="14dp"/>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardView_nightMode"
+                                android:layout_toEndOf="@+id/cardView_dayMode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="10dp"
+                                android:elevation="0dp"
+                                app:cardBackgroundColor="@color/analyticsVehicleRouteNightModeBgColor">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    app:srcCompat="@drawable/ic_night_mode"
+                                    android:padding="14dp"/>
+
+                            </androidx.cardview.widget.CardView>
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/containerSeekbar"
+                    style="@style/DefaultSectionTagStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="10dp"
+                    android:elevation="2dp"
+                    app:cardBackgroundColor="@color/analyticsVehicleRouteCardBgColor">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <TextView
+                            android:id="@+id/txtSeekBarTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="4dp"
+                            android:text="@string/msg_loading"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorPrimary"
+                            tools:text="12:00 PM" />
+
+                        <ImageView
+                            android:id="@+id/imgCollapse"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginBottom="4dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginEnd="4dp"
+                            android:background="?attr/selectableItemBackground"
+                            app:srcCompat="@drawable/hide_button"
+                            app:tint="@color/analyticsVehicleRouteIconColor"/>
+
+                        <com.github.chuross.library.ExpandableLayout
+                            android:id="@+id/exlSeedbar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txtSeekBarTime"
+                            app:exl_duration="400"
+                            app:exl_expanded="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.xw.repo.BubbleSeekBar
+                                    android:id="@+id/seekbar"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="24dp"
+                                    android:paddingTop="4dp"
+                                    android:paddingBottom="4dp"
+                                    app:bsb_hide_bubble="true"
+                                    app:bsb_max="1439"
+                                    app:bsb_min="0"
+                                    app:bsb_progress="0"
+                                    app:bsb_second_track_color="@color/colorPrimary"
+                                    app:bsb_section_count="4"
+                                    app:bsb_section_text_position="bottom_sides"
+                                    app:bsb_show_section_mark="true"
+                                    app:bsb_show_section_text="true"
+                                    app:bsb_show_thumb_text="true"
+                                    app:bsb_touch_to_seek="true"
+                                    app:bsb_track_color="@color/analyticsVehicleSeparatorColor" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="32dp"
+                                    android:layout_below="@+id/seekbar"
+                                    android:orientation="horizontal"
+                                    android:weightSum="3">
+
+                                    <ImageView
+                                        android:id="@+id/btnBack"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="?attr/selectableItemBackground"
+                                        app:srcCompat="@drawable/ic_fast_rewind"
+                                        app:tint="@color/analyticsVehicleRouteIconColor"/>
+
+                                    <ImageView
+                                        android:id="@+id/btnPlayStop"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="?attr/selectableItemBackground"
+                                        app:srcCompat="@drawable/play_button"
+                                        app:tint="@color/analyticsVehicleRouteIconColor"/>
+
+                                    <ImageView
+                                        android:id="@+id/btnNext"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="?attr/selectableItemBackground"
+                                        app:srcCompat="@drawable/ic_fast_forward"
+                                        app:tint="@color/analyticsVehicleRouteIconColor"/>
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+                        </com.github.chuross.library.ExpandableLayout>
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

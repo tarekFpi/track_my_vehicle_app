@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="24dp"
+    android:orientation="horizontal">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/containerToolbar_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:visibility="visible"
+        app:cardCornerRadius="12dp"
+        app:cardPreventCornerOverlap="true">
+
+        <RelativeLayout
+            android:id="@+id/layout_hamburgerIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
+
+            <ImageView
+                android:id="@+id/imgDrawerMenu"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                app:srcCompat="@drawable/hamburger_icon" />
+
+        </RelativeLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/containerToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:cardCornerRadius="12dp"
+        app:cardPreventCornerOverlap="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/textView_liveMap"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="4dp"
+                android:layout_weight="4"
+                android:background="@drawable/bg_live_map"
+                android:gravity="center"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:text="@string/label_live_map"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:autoSizeMinTextSize="9sp"
+                app:autoSizeStepGranularity="2sp"
+                app:autoSizeTextType="uniform"
+                android:textColor="@color/analyticsButtonSpecificColor"/>
+
+            <ImageView
+                android:id="@+id/fabMonitor"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:elevation="8dp"
+                android:focusable="true"
+                android:padding="8dp"
+                android:visibility="gone"
+                app:fabSize="mini"
+                app:srcCompat="@drawable/location_icon"
+                tools:showIn="@layout/activity_home" />
+
+            <TextView
+                android:id="@+id/textView_vehicles"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="4dp"
+                android:layout_weight="4"
+                android:background="@drawable/bg_live_map"
+                android:gravity="center"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:text="@string/label_vehicles"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:textColor="@color/analyticsButtonSpecificColor"
+                app:autoSizeMinTextSize="9sp"
+                app:autoSizeStepGranularity="2sp"
+                app:autoSizeTextType="uniform" />
+
+            <ImageView
+                android:id="@+id/fabVehicles"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="6dp"
+                android:layout_weight="2"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="6dp"
+                android:tint="@color/colorAccent"
+                android:visibility="visible"
+                app:srcCompat="@drawable/car"
+                tools:showIn="@layout/activity_home" />
+
+            <TextView
+                android:id="@+id/textView_notifications"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="4dp"
+                android:layout_weight="4"
+                android:background="@drawable/bg_live_map"
+                android:gravity="center"
+                android:paddingStart="16dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="10dp"
+                android:text="@string/label_notification"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:textColor="@color/analyticsButtonSpecificColor"
+                app:autoSizeMinTextSize="9sp"
+                app:autoSizeStepGranularity="2sp"
+                app:autoSizeTextType="uniform" />
+
+
+            <RelativeLayout
+                android:id="@+id/layout_notifications"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2">
+
+                <ImageView
+                    android:id="@+id/fabNotification"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:padding="6dp"
+                    app:fabSize="mini"
+                    app:srcCompat="@drawable/bell_icon"
+                    tools:showIn="@layout/activity_home" />
+
+                <TextView
+                    android:id="@+id/txtToolbarNotificationNumber"
+                    android:layout_width="12sp"
+                    android:layout_height="12sp"
+                    android:layout_alignStart="@+id/fabNotification"
+                    android:layout_alignTop="@+id/fabNotification"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_notification_badge"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/analyticsButtonSpecificColor"
+                    android:textSize="8sp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView_analytics"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="4"
+                android:background="@drawable/bg_live_map"
+                android:gravity="center"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:text="@string/label_analytics"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:textColor="@color/analyticsButtonSpecificColor"
+                app:autoSizeMinTextSize="9sp"
+                app:autoSizeStepGranularity="2sp"
+                app:autoSizeTextType="uniform" />
+
+            <ImageView
+                android:id="@+id/fabAnalytics"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:elevation="8dp"
+                android:focusable="true"
+                android:padding="8dp"
+                app:fabSize="mini"
+                app:srcCompat="@drawable/analytics_icon"
+                tools:showIn="@layout/activity_home" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

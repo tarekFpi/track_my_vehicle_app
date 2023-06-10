@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/nav_icon_home_svg"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_analytics"
+        android:icon="@drawable/ic_baseline_analytics_24"
+        android:title="@string/title_analytics" />
+
+    <item
+        android:id="@+id/navigation_route"
+        android:icon="@drawable/nav_icon_vehilce_route_svg"
+        android:title="@string/title_vehicle_route" />
+
+
+    <item
+        android:id="@+id/navigation_hourly_distance"
+        android:icon="@drawable/nav_icon_hourly_distance_svg"
+        android:title="@string/title_hourly_distance" />
+
+    <item
+        android:id="@+id/navigation_daily_distance"
+        android:icon="@drawable/nav_icon_daily_distance_svg"
+        android:title="@string/title_daily_distance" />
+
+
+    <item
+        android:id="@+id/navigation_monthly_report"
+        android:icon="@drawable/report_distance_monthly_summary"
+        android:title="@string/title_monthly_report" />
+
+
+    <item
+        android:id="@+id/navigation_daily_engine"
+        android:icon="@drawable/nav_icon_daily_engine_svg"
+        android:title="@string/title_daily_engine" />
+
+    <item
+        android:id="@+id/navigation_location_report"
+        android:icon="@drawable/nav_icon_location_report_svg"
+        android:title="@string/title_location_report" />
+    <item
+        android:id="@+id/navigation_pay_bill"
+        android:icon="@drawable/nav_icon_pay_bill_svg"
+        android:title="@string/title_pay_bill" />
+
+    <item
+        android:id="@+id/navigation_notification"
+        android:icon="@drawable/nav_icon_notification_svg"
+        android:title="@string/label_notification" />
+
+    <item
+        android:id="@+id/navigation_expense"
+        android:icon="@drawable/ic_expense_wapper"
+        android:title="@string/title_expense" />
+
+    <item
+        android:id="@+id/navigation_account"
+        android:icon="@drawable/nav_icon_account_svg"
+        android:title="@string/title_account" />
+
+    <item
+        android:id="@+id/navigation_support"
+        android:icon="@drawable/ic_support"
+        android:title="@string/title_support" />
+
+    <item
+        android:id="@+id/navigation_logout"
+        android:icon="@drawable/nav_icon_log_out_svg"
+        android:title="@string/title_logout" />
+
+    <item
+        android:id="@+id/navigation_switch_user"
+        android:icon="@drawable/nav_icon_account_svg"
+        android:title="Switch User" />
+</menu>

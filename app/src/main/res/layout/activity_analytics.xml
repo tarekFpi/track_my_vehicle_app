@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.AnalyticsActivity"
+    android:background="@color/white">
+
+   <!-- <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView_traveledDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/traveled_distance"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView_dateStart"
+        android:layout_below="@+id/textView_traveledDistance"
+        android:layout_alignStart="@+id/textView_traveledDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/date_start"
+        android:layout_marginEnd="8dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView_dateEnd"
+        android:layout_below="@+id/textView_traveledDistance"
+        android:layout_toEndOf="@+id/textView_dateTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/date_end"
+        android:layout_marginStart="8dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView_dateTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/textView_dateStart"
+        android:text="@string/date_to"
+        android:layout_below="@+id/textView_traveledDistance"/>
+
+    <LinearLayout
+        android:id="@+id/layout_rowTraveledDistanceTitleLevel"
+        android:layout_below="@+id/textView_dateStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/date"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_day"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/day"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_vehicle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/vehicle"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_kmRun"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/km_run"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_traveledDistance"
+        android:layout_below="@+id/layout_rowTraveledDistanceTitleLevel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_traveled_distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_analytics_layout"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_rowTitleSummaryAlerts"
+        android:layout_below="@+id/layout_traveledDistance"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="8dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView_summaryAlerts_title"
+        android:layout_below="@+id/view_rowTitleSummaryAlerts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/summery_alerts"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView_summaryAlerts_subtitle"
+        android:layout_below="@+id/textView_summaryAlerts_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/total_trips_over_speed_fence_cross"
+        android:textSize="12sp"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:id="@+id/layout_rowSummaryAlertsTitleLevel"
+        android:layout_below="@+id/textView_summaryAlerts_subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_summaryAlertDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/date"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_trips"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/trips"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_speeding"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/speeding"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_fenceOut"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/fence_out"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_summaryAlert"
+        android:layout_below="@+id/layout_rowSummaryAlertsTitleLevel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_summary_alert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_analytics_layout"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_rowTitleTotalVehicles"
+        android:layout_below="@+id/layout_summaryAlert"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="8dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_totalVehicle_title"
+            android:layout_below="@+id/view_rowTitleTotalVehicles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_vehicles"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_statusSummary"
+            android:layout_below="@+id/textView_totalVehicle_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/status_summary"
+            android:textSize="12sp"
+            android:textColor="@color/black"/>
+
+        <LinearLayout
+            android:id="@+id/layout_pieChart"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/textView_statusSummary"
+            android:layout_height="400dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/totalVehiclePieChart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_rowTitleVehiclesMoved"
+            android:layout_below="@+id/layout_pieChart"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="8dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_vehiclesMoved_title"
+            android:layout_below="@+id/view_rowTitleVehiclesMoved"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vehicles"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_vehiclesMoved_subTitle"
+            android:layout_below="@+id/textView_vehiclesMoved_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/moved"
+            android:textSize="12sp"
+            android:textColor="@color/black"/>
+
+        <LinearLayout
+            android:id="@+id/layout_barChart"
+            android:layout_below="@+id/textView_vehiclesMoved_subTitle"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/vehicleBarChart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_rowTitleTraveledKm"
+            android:layout_below="@+id/layout_barChart"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="8dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_traveledKm_title"
+            android:layout_below="@+id/view_rowTitleTraveledKm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/traveled"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_traveledKm_subTitle"
+            android:layout_below="@+id/textView_traveledKm_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/km"
+            android:textSize="12sp"
+            android:textColor="@color/black"/>
+
+        <LinearLayout
+            android:id="@+id/layout_lineChart_traveledKm"
+            android:layout_below="@+id/textView_traveledKm_subTitle"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/traveledKmLineChart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_rowTitle_tripsMade"
+            android:layout_below="@+id/layout_lineChart_traveledKm"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="8dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_tripsMade_title"
+            android:layout_below="@+id/view_rowTitle_tripsMade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/trips"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_tripsMade_subTitle"
+            android:layout_below="@+id/textView_tripsMade_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/made"
+            android:textSize="12sp"
+            android:textColor="@color/black"/>
+
+        <LinearLayout
+            android:id="@+id/layout_lineChart_tripsMade"
+            android:layout_below="@+id/textView_tripsMade_subTitle"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/tripsMadeLineChart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>-->
+
+</ScrollView>

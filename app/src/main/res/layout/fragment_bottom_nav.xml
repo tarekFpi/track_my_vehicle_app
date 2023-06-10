@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/viewMainContent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/card_background"
+    app:layout_behavior="@string/view_pager_bottom_sheet_behavior">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/view_handle"
+            android:layout_width="80dp"
+            android:layout_height="6dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/handle_background"
+            android:layout_marginBottom="28dp"/>
+        <View
+            android:id="@+id/top_view_recyclerView"
+            android:layout_alignTop="@+id/recyclerView_vehicleStatus"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/analyticsVehicleRouteSelectDateEventColor"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_vehicleStatus"
+            android:layout_below="@+id/view_handle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/layout_vehicle_status_item"
+            android:layout_gravity="bottom"/>
+
+        <LinearLayout
+            android:id="@+id/layout_sorting"
+            android:layout_below="@+id/recyclerView_vehicleStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sort by:"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="20sp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:id="@+id/textView_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Default"
+                android:textColor="@color/black"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingStart="22dp"
+                android:paddingEnd="22dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/bg_rectangle_border_color_primary"/>
+
+            <TextView
+                android:id="@+id/texView_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Speed"
+                android:textColor="@color/black"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingStart="22dp"
+                android:paddingEnd="22dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/bg_rectangle_border_color_primary"/>
+
+        </LinearLayout>
+
+        <!--<TextView
+            android:id="@+id/txtVehicleListLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="24dp"
+            android:text="Select Vehicle"
+            android:textAllCaps="true"
+            android:textColor="@color/colorTextSecondary" />-->
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_sorting"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:drawableLeft="@drawable/ic_search_wapper"
+            android:drawablePadding="4dp"
+            android:drawableStart="@drawable/ic_search_wapper"
+            android:hint="Search... "
+            android:inputType="text" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listVehicle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etSearch"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_vehicle_list" />
+
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/progressBarId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/txtEmpty"
+            style="@style/Base.TextAppearance.AppCompat.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Vehicle list seems empty right now"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView_cross"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_alignParentEnd="true"
+                android:padding="12dp"
+                app:srcCompat="@drawable/ic_baseline_close_24"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView_legends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LEGENDS"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginTop="48dp"
+                android:layout_marginStart="28dp"/>
+
+            <LinearLayout
+                android:id="@+id/layout_speeding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView_legends"
+                android:layout_below="@+id/textView_legends"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="28dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_speeding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/color_over_speed"
+                    app:cardCornerRadius="4dp"
+                    android:elevation="0dp"
+                    android:layout_gravity="center_vertical">
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="10dp"
+                        android:padding="20dp"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView_Speeding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Speeding: The vehicle was driven above set speed"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="14dp"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView_legends"
+                android:layout_below="@+id/layout_speeding"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="28dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/analyticsVehicleRouteNormalSpeedBgColor"
+                    app:cardCornerRadius="4dp"
+                    android:elevation="0dp"
+                    android:layout_gravity="center_vertical">
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="10dp"
+                        android:padding="20dp"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Normal: The vehicle was driven at set normal speed"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="14dp"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_slow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView_legends"
+                android:layout_below="@+id/layout_normal"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="28dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_slow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/analyticsVehicleRouteSlowSpeedBgColor"
+                    app:cardCornerRadius="4dp"
+                    android:elevation="0dp"
+                    android:layout_gravity="center_vertical">
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="10dp"
+                        android:padding="20dp"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView_slow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Slow: The vehicle was driven below normal speed"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="14dp"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_idle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView_legends"
+                android:layout_below="@+id/layout_slow"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="28dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_idle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/analyticsVehicleRouteIdleSpeedBgColor"
+                    app:cardCornerRadius="4dp"
+                    android:elevation="0dp"
+                    android:layout_gravity="center_vertical">
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="10dp"
+                        android:padding="20dp"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView_idle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Idle: The vehicle was driven too slow"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="14dp"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_idleFlag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView_legends"
+                android:layout_below="@+id/layout_idle"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="28dp"
+                android:paddingEnd="4dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:srcCompat="@drawable/ic_idle"
+                    android:layout_gravity="center_vertical"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView_idleFlag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Idle Flag: The vehicle was idling for 10 minutes or more"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="14dp"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_parking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView_legends"
+                android:layout_below="@+id/layout_idleFlag"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="28dp"
+                android:paddingEnd="4dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:srcCompat="@drawable/ic_parking"
+                    android:layout_gravity="center_vertical"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView_parking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Parking"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="14dp"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_acceleration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView_legends"
+                android:layout_below="@+id/layout_parking"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="28dp"
+                android:paddingEnd="4dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:srcCompat="@drawable/ic_accelaration"
+                    android:layout_gravity="center_vertical"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView_acceleration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sudden Acceleration"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="14dp"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_harshBreak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView_legends"
+                android:layout_below="@+id/layout_acceleration"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="28dp"
+                android:paddingEnd="4dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:srcCompat="@drawable/ic_harsh_break"
+                    android:layout_gravity="center_vertical"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView_harshBreak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Harsh Break"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="14dp"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_speedViolation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView_legends"
+                android:layout_below="@+id/layout_harshBreak"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="28dp"
+                android:paddingEnd="4dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:srcCompat="@drawable/ic_speed_violation"
+                    android:layout_gravity="center_vertical"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView_speedViolation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Speed Violation"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="14dp"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_engineStartStop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView_legends"
+                android:layout_below="@+id/layout_speedViolation"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="28dp"
+                android:paddingEnd="4dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:srcCompat="@drawable/ic_engine_start"
+                    android:layout_gravity="center_vertical"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView_engineStartStop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Engine start/stop"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="14dp"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_powerDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView_legends"
+                android:layout_below="@+id/layout_engineStartStop"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="48dp"
+                android:layout_marginEnd="28dp"
+                android:paddingEnd="4dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:srcCompat="@drawable/ic_power_down_gray"
+                    android:layout_gravity="center_vertical"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView_powerDown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Power Down"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="14dp"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

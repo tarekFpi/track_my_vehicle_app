@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.activity.TripReportActivity"
+        android:background="@color/bgAshColor">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="20dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageView_cancelIcon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_cancel_black"
+                    app:tint="@color/blackTmvWhiteRvtRal"
+                    android:layout_centerVertical="true"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_toEndOf="@+id/imageView_cancelIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trip Report"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/blackTmvWhiteRvtRal"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"/>
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <RelativeLayout
+            android:id="@+id/layout_searchTrips"
+            android:layout_below="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/layout_bottomNav"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_rectangle_fill_color_ash"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:padding="10dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textView_bstId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="BST10307"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_centerVertical="true"/>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_arrow_drop_down"
+                            android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:padding="10dp"
+                        android:background="@drawable/bg_rectangle_fill_color_ash">
+
+                        <LinearLayout
+                            android:id="@+id/layout_startDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Start Date"
+                                android:textSize="12sp"
+                                android:textColor="@color/valueTextAshColor"/>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textView_startDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Thur, Nov 11, 2021"
+                                android:textSize="16sp"
+                                android:textColor="@color/quantum_googgreen"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_centerInParent="true"
+                            android:layout_alignTop="@+id/layout_startDate"
+                            android:layout_alignBottom="@+id/layout_startDate"
+                            android:layout_width="1dp"
+                            android:layout_height="0dp"
+                            android:background="@color/LabelTextAshColor"/>
+
+                        <LinearLayout
+                            android:id="@+id/layout_endDate"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="End Date"
+                                android:textSize="12sp"
+                                android:textColor="@color/valueTextAshColor"/>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textView_endDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Thur, Nov 11, 2021"
+                                android:textSize="16sp"
+                                android:textColor="@color/red"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textView_search_trip_report"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Search Trips"
+                        android:textColor="@color/blackTmvWhiteRvtRal"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:background="@drawable/bg_rectangle_fill_color_primary"
+                        android:padding="10dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="20dp"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageView_trips"
+            android:layout_below="@+id/layout_searchTrips"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/car"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:layout_below="@+id/layout_searchTrips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView_empty_report"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_empty_trip_report"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_tripReport"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_trip_report"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

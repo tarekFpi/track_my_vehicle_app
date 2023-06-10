@@ -1,0 +1,7 @@
+<resources>
+    <declare-styleable name="IconLabelValue">
+        <attr name="ilv_icon" format="color|reference" />
+        <attr name="ilv_label" format="string" />
+        <attr name="ilv_value" format="string" />
+    </declare-styleable>
+</resources>

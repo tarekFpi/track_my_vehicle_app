@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+    tools:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/containerVehicleItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgVehicle"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/img_halo_circle"
+                android:src="@drawable/img_car" />
+
+            <LinearLayout
+                android:id="@+id/containerVehicleNames"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@+id/imgEngineStatus"
+                        android:layout_toLeftOf="@+id/imgEngineStatus"
+                        android:text="Loading ..."
+                        android:textAllCaps="true"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textStyle="bold"
+                        tools:text="BST1234"
+                        android:layout_alignParentLeft="true" />
+
+                    <ImageView
+                        android:layout_marginEnd="12dp"
+                        android:id="@+id/imgEngineStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/engine_on"
+                        android:layout_marginRight="12dp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/vrn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Loading ..."
+                    android:textColor="@color/colorTextSecondary"
+                    tools:text="DHAKA METRO GA 1234 5678" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/containerStatusDetails"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/containerVehicleItem">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                >
+
+              <!--  <com.singularity.trackmyvehicle.view.customview.IconLabelValue
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:ilv_icon="@drawable/dailyengine"
+                    app:ilv_label="Engine"
+                    app:ilv_value="ON" />-->
+
+                <com.singularity.trackmyvehicle.view.customview.IconLabelValue
+                    android:id="@+id/ilvSpeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:ilv_icon="@drawable/ic_asset_speed_meeter"
+                    app:ilv_label="Speed"
+                    app:ilv_value="24.5 KM/H" />
+
+                 <com.singularity.trackmyvehicle.view.customview.IconLabelValue
+                     android:id="@+id/ilvTraveled"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     app:ilv_icon="@drawable/vd_distance"
+                     app:ilv_label="Travel"
+                     app:ilv_value="54KM" />
+
+                <com.singularity.trackmyvehicle.view.customview.IconLabelValue
+                    android:id="@+id/ilvLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:ilv_icon="@drawable/ic_location"
+                    app:ilv_label="Location"
+                    app:ilv_value="Baridhara DOHS" />
+
+                <com.singularity.trackmyvehicle.view.customview.IconLabelValue
+                    android:id="@+id/ilvUpdatedAt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:ilv_icon="@drawable/ic_asset_clock"
+                    app:ilv_label="Last Updated"
+                    app:ilv_value="2m ago" />
+
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:id="@+id/containerSuspended"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/suspended"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+
+            <TextView
+                android:layout_marginStart="4dp"
+                android:layout_gravity="center_vertical"
+                android:text="Service suspended! Please pay your bills."
+                android:textColor="@color/red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

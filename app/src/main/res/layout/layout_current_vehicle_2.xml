@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/containerVehicleDetails"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/containerVehicleInfo"
+        style="@style/DefaultSectionTagStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="8dp"
+        app:contentPaddingLeft="0dp"
+        app:contentPaddingRight="0dp"
+        app:contentPaddingTop="0dp">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="end"
+            android:layout_marginTop="42dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:indeterminate="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="0dp"
+            android:paddingEnd="16dp"
+            android:paddingRight="16dp">
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/viewPullBar"
+                android:layout_width="64dp"
+                android:layout_height="4dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="24dp"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="2dp" />
+
+
+            <ImageView
+                android:id="@+id/imgVehicle"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/viewPullBar"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/img_halo_circle"
+                android:src="@drawable/img_car" />
+
+            <LinearLayout
+                android:id="@+id/containerVehicleNames"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewPullBar"
+                android:layout_toEndOf="@+id/imgVehicle"
+                android:layout_toRightOf="@+id/imgVehicle"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:focusable="true">
+
+                <TextView
+                    android:id="@+id/txtVehicleAliasName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular_1"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textStyle="bold"
+                    android:text="@string/msg_loading"
+                    tools:text="Nazma's Lexus 2017" />
+                <!--android:fontFamily="@font/proxima_nova_font"-->
+
+
+                <TextView
+                    android:id="@+id/txtVehicleId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular_1"
+                    android:text="@string/msg_loading"
+                    tools:text="BST1234"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textStyle="bold" />
+                <!--android:fontFamily="@font/proxima_nova_font"-->
+
+                <TextView
+                    android:id="@+id/terminalId_TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular_1"
+                    android:text="@string/msg_loading"
+                    tools:text="1234"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textStyle="bold"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_marginTop="2dp"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="top"
+                        android:visibility="gone"
+                        android:tint="@color/colorTextSecondary"
+                        app:srcCompat="@drawable/ic_location" />
+
+                    <TextView
+                        android:maxLines="2"
+                        android:id="@+id/txtVehicleLastLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/roboto_regular_1"
+                        android:text="@string/msg_loading"
+                        tools:text="BARIDHARA DOHS, DHAKABARIDHARA DOHS, DHAKABARIDHARA DOHS, DHAKA"
+
+                        android:textColor="@color/colorTextSecondary"
+                        android:textSize="12sp" />
+                    <!--android:fontFamily="@font/proxima_nova_font"-->
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtVehicleLastUpdatedAt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/roboto_regular_1"
+                    android:gravity="end"
+                    android:text="@string/msg_loading"
+                    tools:text="LAST UPDATED: 4 HOURS AGO"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="8sp" />
+                <!--android:fontFamily="@font/proxima_nova_font"-->
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtNoInternetText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/containerVehicleNames"
+                android:gravity="center_horizontal"
+                android:text="No Internet Connection Available"
+                android:textAlignment="center"
+                android:textColor="@color/red"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtNoInternetText"
+                android:orientation="vertical">
+
+
+                <View
+                    android:id="@+id/divider1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/containerVehicleNames"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@color/quantum_grey" />
+
+                <LinearLayout
+                    android:id="@+id/containerStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/divider1"
+                    android:layout_marginTop="4dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3.02"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/containerTravelDistance"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="TRAVEL"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="14sp" />
+
+                        <ProgressBar
+                            tools:visibility="gone"
+                            android:visibility="gone"
+                            android:id="@+id/progressTravelledDistance"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"/>
+                        <TextView
+                            tools:visibility="visible"
+                            android:visibility="visible"
+                            android:id="@+id/txtTravelledDistance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="--"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+
+                    <View
+                        tools:visibility="gone"
+                        android:id="@+id/dividerTravelEngine"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight=".01"
+                        android:background="@color/quantum_grey" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ENGINE"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="14sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/imgEngineStatus"
+                                android:layout_width="8dp"
+                                android:layout_height="8dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginRight="8dp"
+                                android:src="@drawable/engine_off" />
+
+                            <TextView
+                                android:id="@+id/txtEngineStatus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="--"
+                                android:textColor="@color/colorTextPrimary"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight=".01"
+                        android:background="@color/quantum_grey" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SPEED"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/txtVehicleSpeed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="--"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/containerStatus"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@color/quantum_grey"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:id="@+id/containerPayment"
+                    tools:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/txtAlert"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_toStartOf="@+id/btnPayNow"
+                        android:layout_toLeftOf="@+id/btnPayNow"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="12"
+                        android:text="* Your subscription expires in 5 days"
+                        android:textColor="@color/red"
+                        android:textSize="14sp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        tools:visibility="gone"
+                        android:id="@+id/btnPayNow"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:minHeight="0dp"
+                        android:paddingStart="8dp"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="4dp"
+                        android:paddingEnd="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="4dp"
+                        android:text="@string/action_pay_now"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:backgroundTint="@color/bgPayNow"
+                        app:cornerRadius="16dp"
+                        app:rippleColor="@color/bgPayNowRipple"
+                        app:strokeColor="@color/bgPayNow" />
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/quantum_grey" />
+
+
+                <RelativeLayout
+                    tools:visibility="visible"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_notification_text">
+
+                    <ImageView
+                        android:id="@+id/imgNotificationIcon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:padding="4dp"
+                        app:srcCompat="@drawable/ic_notification" />
+
+                    <TextView
+                        android:id="@+id/txtNotificationNumber"
+                        android:layout_width="10sp"
+                        android:layout_height="10sp"
+                        android:layout_alignStart="@+id/imgNotificationIcon"
+                        android:layout_alignLeft="@+id/imgNotificationIcon"
+                        android:layout_alignTop="@+id/imgNotificationIcon"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/bg_notification_badge"
+                        android:gravity="center"
+                        android:text="3"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorTextPrimaryWithPrimaryBackground"
+                        android:textSize="8sp" />
+
+                    <TextView
+                        android:id="@+id/txtNotifications"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_alignTop="@+id/imgNotificationIcon"
+                        android:layout_alignBottom="@+id/imgNotificationIcon"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toEndOf="@+id/imgNotificationIcon"
+                        android:layout_toRightOf="@+id/imgNotificationIcon"
+                        android:clickable="true"
+                        android:ellipsize="end"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingStart="4dp"
+                        android:paddingLeft="4dp"
+                        android:paddingEnd="8dp"
+                        android:paddingRight="8dp"
+                        android:text="@string/you_have_3_unread_notification_for_this_vehicle"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="14sp" />
+
+
+                </RelativeLayout>
+
+
+                <View
+                    tools:visibility="visible"
+                    android:visibility="gone"
+                    android:id="@+id/divider3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@color/quantum_grey" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/listReportButtons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/divider3"
+                    android:isScrollContainer="false"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/item_report_button" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/bg_app_backdrop"
+    tools:context="com.singularity.trackmyvehicle.view.activity.SplashScreenActivity">
+
+    <View android:background="@color/colorAppBackground"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:alpha="0.85">
+    </View>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="top"
+        android:src="@drawable/ic_app_logo" />
+
+    <LinearLayout
+        android:id="@+id/powered"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/powered_text_splash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:text="@string/powered_text" />
+
+        <ImageView
+            android:id="@+id/powered_logo"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_bondstein"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFCEE">
+
+    <ImageButton
+        android:id="@+id/closeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_close" />
+    <TextView
+        android:id="@+id/text_SuspendedTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/closeBtn"
+        android:fontFamily="@font/roboto_bold_0"
+        android:text="Your Subscription Has Expired"
+        android:textAlignment="center"
+        android:textColor="#65647C"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/text_SuspendedSubTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_SuspendedTitle"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/roboto_light_0"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="If you have just renewed your subscription, please wait 15 minutes and try again."
+        android:textAlignment="center"
+        android:textColor="#8B7E74"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_SuspendedSubTitle"
+        android:layout_marginTop="20dp"
+        android:layout_above="@+id/helplineLayout"
+        android:src="@drawable/suspended" />
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/helplineLayout"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/helplineBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:padding="16dp"
+            android:visibility="gone"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            app:iconTint="#1F1F1F"
+            app:icon="@drawable/ic_round_call_24"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:text="Helpline"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#1F1F1F"
+            app:cornerRadius="10dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/paymentBtn"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:padding="16dp"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            app:iconTint="#1F1F1F"
+            app:icon="@drawable/ic_baseline_payments_24"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:text="Make Payment"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#1F1F1F"
+            app:cornerRadius="10dp" />
+    </LinearLayout>
+
+
+</RelativeLayout>

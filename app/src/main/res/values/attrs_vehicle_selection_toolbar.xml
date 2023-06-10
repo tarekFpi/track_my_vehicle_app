@@ -1,0 +1,9 @@
+<resources>
+    <declare-styleable name="VehicleSelectionToolbarView">
+        <attr name="vst_back_drawable" format="color|reference" />
+        <attr name="vst_change_vehicle_drawable" format="color|reference" />
+        <attr name="vst_vehicle_name" format="string" />
+        <attr name="vst_right_button_text_top" format="string" />
+        <attr name="vst_right_button_text_bottom" format="string" />
+    </declare-styleable>
+</resources>

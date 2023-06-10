@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <entry>
+        <key>polyline_color</key>
+        <value>#80FF0000</value>
+    </entry>
+    <entry>
+        <key>polyline_width</key>
+        <value>5</value>
+    </entry>
+</defaultsMap>

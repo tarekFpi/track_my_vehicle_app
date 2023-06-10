@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+
+        <variable
+            name="eventVehicleRouteAnalyticsItem"
+            type="com.singularity.trackmyvehicle.model.apiResponse.v3.EventsVehicleRouteAnalyticsItem"/>
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/layout_parking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageView_parking"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_parking"
+            android:layout_toEndOf="@+id/imageView_parking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/analyticsVehicleRouteIconColor"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"/>
+
+        <CheckBox
+            android:id="@+id/checkbox_parking"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:layout_centerVertical="true"
+            android:buttonTint="@color/analyticsVehicleRouteIconColor"/>
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,1002 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".view.activity.AnalyticsFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_onePercent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/scroll_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_onePercent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/parent_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_first_user_layer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintGuide_percent=".12"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_below_userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintGuide_percent=".06"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/colorPrimary"
+                android:elevation="2dp"
+                app:layout_constraintBottom_toBottomOf="@+id/guideline_first_user_layer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_subItemZeroFourPercent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintGuide_percent=".04"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView_label_greetings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hello"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/guideline_subItemZeroFourPercent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView_userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_label_greetings" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/layout_totalVehicle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="2dp"
+                app:cardPreventCornerOverlap="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/guideline_below_userName">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textView_totalVehicles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/total_vehicles_number"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/layout_water_waveView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView_totalVehicles"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center">
+
+                        <com.yangp.ypwaveview.YPWaveView
+                            android:id="@+id/waveView_activeVehicles"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/circle_black_stroke_yellow"
+                            app:animatorEnable="true"
+                            app:behideColor="#00FFFFFF"
+                            app:borderColor="#FFD109"
+                            app:cardElevation="2dp"
+                            app:frontColor="#FFD109"
+                            app:max="100"
+                            app:progress="0"
+                            app:shapeType="circle"
+                            app:strong="80"
+                            app:textColor="@color/white"
+                            app:textHidden="true"
+                            app:textSize="20sp" />
+
+                        <com.yangp.ypwaveview.YPWaveView
+                            android:id="@+id/waveView_safeDriving"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp"
+                            android:layout_toEndOf="@+id/waveView_activeVehicles"
+                            android:background="@drawable/circle_black_stroke_green"
+                            android:visibility="visible"
+                            app:animatorEnable="true"
+                            app:behideColor="#00FFFFFF"
+                            app:borderColor="#03A113"
+                            app:cardElevation="2dp"
+                            app:frontColor="#03A113"
+                            app:max="100"
+                            app:progress="0"
+                            app:shapeType="circle"
+                            app:strong="80"
+                            app:textColor="@color/white"
+                            app:textHidden="true"
+                            app:textSize="20sp" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignStart="@+id/waveView_activeVehicles"
+                            android:layout_alignEnd="@+id/waveView_activeVehicles"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/imageView_pulse"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_centerHorizontal="true"
+                                app:srcCompat="@drawable/pulse" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textView_activeVehiclesPercentage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/imageView_pulse"
+                                android:layout_centerHorizontal="true"
+                                android:text="0%"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignStart="@+id/waveView_safeDriving"
+                            android:layout_alignEnd="@+id/waveView_safeDriving"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:visibility="visible">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/imageView_shield"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_centerHorizontal="true"
+                                app:srcCompat="@drawable/shield" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textView_safeVehiclesPercentage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/imageView_shield"
+                                android:layout_centerHorizontal="true"
+                                android:text="0%"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_water_waveView"
+                        android:layout_alignStart="@+id/layout_water_waveView"
+                        android:layout_alignEnd="@+id/layout_water_waveView">
+
+                        <View
+                            android:id="@+id/view_separatorActiveVehicles"
+                            android:layout_width="120dp"
+                            android:layout_height="4dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@color/colorPrimary" />
+
+                        <View
+                            android:id="@+id/view_separatorSafeDriving"
+                            android:layout_width="120dp"
+                            android:layout_height="4dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="20dp"
+                            android:background="@color/colorPrimary"
+                            android:visibility="visible" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textView_activeVehicles"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view_separatorActiveVehicles"
+                            android:layout_alignEnd="@+id/view_separatorActiveVehicles"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginTop="10dp"
+                            android:alpha="0.5"
+                            android:gravity="center"
+                            android:text="Active Vehicles"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textView_safeDriving"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view_separatorSafeDriving"
+                            android:layout_alignStart="@+id/view_separatorSafeDriving"
+                            android:layout_alignEnd="@+id/view_separatorSafeDriving"
+                            android:layout_marginTop="10dp"
+                            android:alpha="0.5"
+                            android:gravity="center"
+                            android:text="Safe Driving"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:visibility="visible" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textView_activeVehicleNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textView_activeVehicles"
+                            android:layout_alignEnd="@+id/textView_activeVehicles"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:text="@string/_14"
+                            android:textColor="@color/black"
+                            android:textSize="26sp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textView_safeDrivingNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textView_safeDriving"
+                            android:layout_alignStart="@+id/textView_safeDriving"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:text="@string/_9"
+                            android:textColor="@color/black"
+                            android:textSize="26sp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cardView_listActiveVehicles"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textView_activeVehicleNumber"
+                            android:layout_alignEnd="@+id/textView_activeVehicleNumber"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            app:cardCornerRadius="8dp">
+
+                            <LinearLayout
+                                android:id="@+id/layout_activeVehicleList"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/card_background_black_border"
+                                android:gravity="center"
+                                android:padding="2dp">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:alpha="0.5"
+                                    android:text="List"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cardView_listSafeDriving"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textView_safeDrivingNumber"
+                            android:layout_alignStart="@+id/textView_safeDrivingNumber"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:visibility="visible"
+                            app:cardCornerRadius="8dp">
+
+                            <LinearLayout
+                                android:id="@+id/layout_safeDrivingList"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/card_background_black_border"
+                                android:gravity="center"
+                                android:padding="2dp">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:alpha="0.5"
+                                    android:text="List"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardView_weekDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="20dp"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_totalVehicle">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textView_weekInNumbers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/week"
+                        android:textColor="@color/black"
+                        android:textSize="24sp" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_weekDetails_titles"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView_weekInNumbers"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <View
+                                android:layout_width="20dp"
+                                android:layout_height="4dp"
+                                android:background="@color/white" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textView_trips_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="@string/_239"
+                                android:textColor="@color/black"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textView_trips"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/trips_alert"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <View
+                                android:layout_width="20dp"
+                                android:layout_height="4dp"
+                                android:background="@color/white" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textView_kmTraveled_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="@string/_12_357"
+                                android:textColor="@color/black"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textView_kmTraveled"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/km_traveled"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <View
+                                android:layout_width="20dp"
+                                android:layout_height="4dp"
+                                android:background="@color/white" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textView_fenceOut_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="@string/_21"
+                                android:textColor="@color/black"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textView_fenceOut"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/fence_out_alert"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <View
+                                android:layout_width="20dp"
+                                android:layout_height="4dp"
+                                android:background="@color/white" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textView_overSpeed_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="@string/_122"
+                                android:textColor="@color/black"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textView_overSpeed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/over_speed"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView_weekDetails">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textView_seven_days_summary_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:paddingTop="18dp"
+                        android:paddingEnd="18dp"
+                        android:paddingBottom="18dp"
+                        android:text="@string/_7_days"
+                        android:textColor="@color/black"
+                        android:textSize="24sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textView_reports"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView_seven_days_summary_details"
+                        android:layout_marginStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:text="Reports"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textView_graphs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView_seven_days_summary_details"
+                        android:layout_marginStart="10dp"
+                        android:layout_toRightOf="@+id/textView_reports"
+                        android:paddingEnd="10dp"
+                        android:text="Graphs"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:id="@+id/view_separatorReports"
+                        android:layout_width="40dp"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/textView_reports"
+                        android:layout_alignStart="@+id/textView_reports"
+                        android:layout_marginTop="4dp"
+                        android:background="@color/black"
+                        android:visibility="visible" />
+
+                    <View
+                        android:id="@+id/view_separatorGraphs"
+                        android:layout_width="40dp"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/textView_graphs"
+                        android:layout_alignStart="@+id/textView_graphs"
+                        android:layout_marginTop="4dp"
+                        android:background="@color/black"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:id="@+id/layout_reportDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view_separatorReports"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginBottom="20dp"
+                        android:visibility="visible">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textView_traveledDistance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/traveled_distance"
+                            android:textColor="@color/darkGreyColor"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textView_kmInTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textView_traveledDistance"
+                            android:layout_alignStart="@+id/textView_traveledDistance"
+                            android:layout_marginEnd="8dp"
+                            android:text="@string/km_in_total_number"
+                            android:textColor="@color/darkGreyColor" />
+
+                        <View
+                            android:id="@+id/view_rowTitleTotalVehicles"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_below="@+id/textView_kmInTotal"
+                            android:layout_marginTop="8dp"
+                            android:background="@android:color/black" />
+
+                        <!--<androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textView_dateEnd"
+                            android:layout_below="@+id/textView_traveledDistance"
+                            android:layout_toEndOf="@+id/textView_dateTo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/date_end"
+                            android:layout_marginStart="8dp"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textView_dateTo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/textView_dateStart"
+                            android:text="@string/date_to"
+                            android:layout_below="@+id/textView_traveledDistance"/>-->
+
+                        <LinearLayout
+                            android:id="@+id/layout_rowTraveledDistanceTitleLevel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view_rowTitleTotalVehicles"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            android:weightSum="4">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textView_date"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/date" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textView_day"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/day" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textView_vehicle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/vehicle" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textView_kmRun"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/km_run" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_traveledDistance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_rowTraveledDistanceTitleLevel"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <View
+                                android:id="@+id/view_TitleTraveledDistance"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:background="@color/quantum_grey500"
+                                android:alpha=".4"/>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerView_traveled_distance"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="8dp"
+                                android:paddingBottom="8dp"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                tools:listitem="@layout/item_analytics_layout" />
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textView_summaryAlerts_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_traveledDistance"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="60dp"
+                            android:text="@string/summery_alerts"
+                            android:textColor="@color/darkGreyColor"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textView_summaryAlerts_subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textView_summaryAlerts_title"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/total_trips_over_speed_fence_cross"
+                            android:textColor="@color/darkGreyColor"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:id="@+id/view_rowTitleSummaryAlerts"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_below="@+id/textView_summaryAlerts_subtitle"
+                            android:layout_marginTop="8dp"
+                            android:background="@android:color/black" />
+
+                        <LinearLayout
+                            android:id="@+id/layout_rowSummaryAlertsTitleLevel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view_rowTitleSummaryAlerts"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textView_summaryAlertDate"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/date" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textView_trips_report"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/trips" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textView_speeding"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/speeding" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textView_fenceOut_report"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/fence_out" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_summaryAlert"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_rowSummaryAlertsTitleLevel"
+                            android:orientation="vertical">
+
+                            <View
+                                android:id="@+id/view_TitleSummaryAlerts"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:background="@color/quantum_grey500"
+                                android:alpha=".4"/>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerView_summary_alert"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="8dp"
+                                android:paddingBottom="8dp"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                tools:listitem="@layout/item_analytics_layout" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_graphDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_reportDetails"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:visibility="gone">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textView_traveledKm_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/traveled"
+                            android:textColor="@color/darkGreyColor"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/layout_lineChart_traveledKm"
+                            android:layout_width="match_parent"
+                            android:layout_height="400dp"
+                            android:layout_below="@+id/textView_traveledKm_title"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <com.github.mikephil.charting.charts.LineChart
+                                android:id="@+id/traveledKmLineChart"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textView_tripsMade_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_lineChart_traveledKm"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="40dp"
+                            android:text="@string/trips"
+                            android:textColor="@color/darkGreyColor"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/layout_lineChart_tripsMade"
+                            android:layout_width="match_parent"
+                            android:layout_height="400dp"
+                            android:layout_below="@+id/textView_tripsMade_title"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <com.github.mikephil.charting.charts.LineChart
+                                android:id="@+id/tripsMadeLineChart"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textView_vehiclesMoved_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_lineChart_tripsMade"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="40dp"
+                            android:text="@string/vehicles"
+                            android:textColor="@color/darkGreyColor"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/layout_barChart"
+                            android:layout_width="match_parent"
+                            android:layout_height="400dp"
+                            android:layout_below="@+id/textView_vehiclesMoved_title"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <com.github.mikephil.charting.charts.BarChart
+                                android:id="@+id/vehicleBarChart"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

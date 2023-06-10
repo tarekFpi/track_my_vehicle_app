@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAppBackground">#fed109</color>
+    <color name="colorPrimary">#fed109</color>
+    <color name="colorPrimaryTransparent">#E6FED109</color>
+    <color name="colorPrimaryDark">#FFC400</color>
+    <color name="colorAccent">#212121</color>
+
+    <color name="tabControl">#212121</color>
+
+    <color name="tabControl80">#aa212121</color>
+
+    <color name="colorTextActive">#2e2e2e</color>
+
+    <color name="fabForegroundColor">#212121</color>
+    <color name="fabBackgroundColor">@color/colorPrimary</color>
+    <color name="colorDialogBackground">@color/colorPrimary</color>
+    <color name="colorSeekBarBg">@color/colorAccent</color>
+    <color name="colorReportButtonStroke">#FFC107</color>
+
+    <color name="colorTextPrimaryWithPrimaryBackground">#212121</color>
+    <color name="colorTintHeaderLogo">#ffffff</color>
+
+    <color name="barChartColorFill">#38C876</color>
+
+    <color name="lineChartColorFill">#33A5F2</color>
+
+    <color name="lineChartValueTextColor">#2000ff</color>
+
+    <color name="lineChartTripsMadeColor">#FC7C55</color>
+
+    <color name="darkGreyColor">#374353</color>
+
+    <color name="analyticsButtonSpecificColor">#000000</color>
+
+    <color name="commonTextColor">#FFFFFF</color>
+    <color name="bst_id_title_color">#000000</color>
+
+    <color name="analyticsVehicleRouteCardBgColor">#E9000000</color>
+    <color name="analyticsVehicleRouteBgColor">#75000000</color>
+    <color name="analyticsVehicleSeparatorColor">#58543F</color>
+    <color name="analyticsVehicleRouteIconColor">#FFC107</color>
+    <color name="analyticsVehicleselectDateColor">#FFFFFF</color>
+    <color name="analyticsVehicleRouteNightModeBgColor">#3D4148</color>
+    <color name="analyticsVehicleRouteNormalSpeedBgColor">#FFA500</color>
+    <color name="analyticsVehicleRouteSlowSpeedBgColor">#FFFF00</color>
+    <color name="analyticsVehicleRouteIdleSpeedBgColor">#9F9F9F</color>
+    <color name="crossIconColor">@color/colorPrimary</color>
+
+    <color name="blackTmvWhiteRvtRal">#000000</color>
+    <color name="whiteTmvBlackRvtRal">#FFFFFF</color>
+
+    <color name="circle_transparent_color">#C3FED109</color>
+
+
+
+</resources>

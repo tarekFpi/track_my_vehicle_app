@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppThemeParent" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/colorAppBackground</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!--<item name="android:fontFamily">@font/proxima_nova_font</item>-->
+        <!--<item name="android:fontFamily">@font/roboto_regular_1</item>-->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+        <item name="android:textColorSecondary">@color/colorTextSecondary</item>
+        <item name="windowActionModeOverlay">true</item>
+    </style>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAppBackground">#ed1c24</color>
+    <color name="colorPrimary">#ED1C24</color>
+    <color name="colorPrimaryDark">#BF360C</color>
+    <color name="colorAccent">#263238</color>
+    <color name="colorPrimaryTransparent">#E6ed1c24</color>
+    <color name="tabControl">#ffffff</color>
+
+
+    <color name="tabControl80">#aaffffff</color>
+
+    <color name="colorTextActive">#2e2e2e</color>
+
+    <color name="fabForegroundColor">#ffffff</color>
+    <color name="fabBackgroundColor">@color/colorPrimary</color>
+    <color name="colorDialogBackground">#ffffff</color>
+    <color name="colorSeekBarBg">@color/colorPrimary</color>
+    <color name="colorReportButtonStroke">#ED1C24</color>
+
+    <color name="colorTextPrimaryWithPrimaryBackground">#ffffff</color>
+    <color name="colorTintHeaderLogo">#00ffffff</color>
+
+    <color name="bst_id_title_color">#000000</color>
+
+    <color name="blackTmvWhiteRvtRal">#FFFFFF</color>
+    <color name="whiteTmvBlackRvtRal">#000000</color>
+
+
+    <color name="circle_transparent_color">#B9ED1C24</color>
+</resources>

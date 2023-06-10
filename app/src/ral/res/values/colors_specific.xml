@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAppBackground">#2E3192</color>
+    <color name="colorPrimary">#2E32C1</color>
+    <color name="colorPrimaryDark">#2E3192</color>
+    <color name="colorAccent">#263238</color>
+    <color name="colorPrimaryTransparent">#B92E3192</color>
+    <color name="tabControl">#ffffff</color>
+
+    <color name="tabControl80">#aaffffff</color>
+
+    <color name="colorTextActive">#2e2e2e</color>
+
+    <color name="fabForegroundColor">#ffffff</color>
+    <color name="fabBackgroundColor">?colorPrimary</color>
+    <color name="colorDialogBackground">#ffffff</color>
+    <color name="colorSeekBarBg">?colorPrimary</color>
+    <color name="colorReportButtonStroke">#2E3192</color>
+
+    <color name="colorTextPrimaryWithPrimaryBackground">#ffffff</color>
+    <color name="colorTintHeaderLogo">#00ffffff</color>
+
+    <color name="darkGreyColor">#374353</color>
+
+    <color name="analyticsButtonSpecificColor">#FFFFFF</color>
+
+    <color name="commonTextColor">#000000</color>
+    <color name="bst_id_title_color">#FFFFFF</color>
+
+    <color name="analyticsVehicleRouteCardBgColor">#E9FFFFFF</color>
+    <color name="analyticsVehicleRouteBgColor">#75000000</color>
+    <color name="analyticsVehicleSeparatorColor">#58543F</color>
+    <color name="analyticsVehicleRouteIconColor">@color/colorPrimaryDark</color>
+    <color name="analyticsVehicleselectDateColor">@color/colorPrimaryDark</color>
+    <color name="analyticsVehicleRouteNightModeBgColor">#3D4148</color>
+    <color name="analyticsVehicleRouteNormalSpeedBgColor">#FFA500</color>
+    <color name="analyticsVehicleRouteSlowSpeedBgColor">#FFFF00</color>
+    <color name="analyticsVehicleRouteIdleSpeedBgColor">#9F9F9F</color>
+    <color name="analyticsVehicleRouteSelectDateEventColor">#848484</color>
+    <color name="crossIconColor">#000000</color>
+
+    <color name="blackTmvWhiteRvtRal">#FFFFFF</color>
+    <color name="whiteTmvBlackRvtRal">#000000</color>
+
+    <color name="circle_transparent_color">#BE2E32C1</color>
+</resources>

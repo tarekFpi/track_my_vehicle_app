@@ -1,0 +1,123 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppThemeParent" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/colorAppBackground</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!--<item name="android:fontFamily">@font/proxima_nova_font</item>-->
+        <!--<item name="android:fontFamily">@font/roboto_regular_1</item>-->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+        <item name="android:textColorSecondary">@color/colorTextSecondary</item>
+        <item name="windowActionModeOverlay">true</item>
+    </style>
+
+
+    <style name="AppTheme.FullScreenDialog" parent="AppThemeParent">
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="ButtonPrimaryParent" parent="Widget.MaterialComponents.Button">
+        <item name="android:textSize">22sp</item>
+        <item name="android:capitalize">characters</item>
+    </style>
+
+    <style name="ButtonRoundedPrimaryParent" parent="Widget.MaterialComponents.Button">
+        <item name="android:textSize">20sp</item>
+        <item name="android:capitalize">characters</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+
+    <style name="DefaultCardViewStyleParent" parent="Theme.MaterialComponents.Light">
+        <item name="cardCornerRadius">2dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="contentPaddingBottom">24dp</item>
+        <item name="contentPaddingTop">24dp</item>
+        <item name="contentPaddingLeft">16dp</item>
+        <item name="contentPaddingRight">16dp</item>
+        <item name="cardBackgroundColor">@color/white</item>
+    </style>
+
+    <style name="DefaultSectionTagStyle" parent="Theme.MaterialComponents.Light">
+        <item name="cardCornerRadius">4dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="contentPaddingBottom">8dp</item>
+        <item name="contentPaddingTop">8dp</item>
+        <item name="contentPaddingLeft">16dp</item>
+        <item name="contentPaddingRight">16dp</item>
+        <item name="cardBackgroundColor">@color/white</item>
+    </style>
+
+
+    <style name="DefaultLabelStyle" parent="@style/TextAppearance.MaterialComponents.Body1">
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <style name="DefaultFieldStyle" parent="@style/TextAppearance.MaterialComponents.Headline1">
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+
+    <style name="DefaultSeparator">
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:background">#dddddd</item>
+    </style>
+
+    <style name="DialogCustomTheme" parent="Theme.MaterialComponents.Light.Dialog">
+        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+
+    <style name="TabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <style name="ToolbarStyle" parent="@style/ThemeOverlay.MaterialComponents.ActionBar">
+        <item name="colorControlNormal">@color/tabControl</item>
+    </style>
+
+
+    <style name="AppSeekBarTheme">
+        <item name="colorAccent">@color/colorSeekBarBg</item>
+    </style>
+
+    <style name="AppToolbar">
+        <item name="theme">@style/Theme.MaterialComponents.Light</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:tint">@color/black</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="PopupMenuStyle" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:colorBackground">@color/white</item>
+        <item name="android:textColor">@color/colorTextPrimaryWithPrimaryBackground</item>
+    </style>
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.MaterialComponents.Light">
+        <item name="colorControlNormal">@color/colorTextPrimaryWithPrimaryBackground</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light" />
+
+    <style name="AppTheme.Picker" parent="Theme.AppCompat.Light.NoActionBar" >
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:text">24sp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize10Percent" parent="">
+        <item name="cornerSize">20%</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+
+</resources>

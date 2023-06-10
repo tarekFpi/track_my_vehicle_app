@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppThemeParent">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="ButtonPrimary" parent="@style/ButtonPrimaryParent">
+        <item name="android:background">@color/colorAccent</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:color">@android:color/white</item>
+    </style>
+
+    <style name="ButtonRoundedPrimary" parent="@style/ButtonRoundedPrimaryParent">
+        <item name="android:background">@drawable/bg_round_button</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:color">@color/black</item>
+    </style>
+
+    <style name="DefaultCardViewStyle" parent="@style/DefaultCardViewStyleParent"></style>
+</resources>

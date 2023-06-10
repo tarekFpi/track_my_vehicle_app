@@ -1,0 +1,329 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentAccount"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.singularity.trackmyvehicle.view.fragment.AccountFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp">
+
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/img_car_dashboard" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_margin="8dp"
+                    app:backgroundTint="@color/colorPrimary"
+                    app:srcCompat="@drawable/ic_mode_edit_black_24dp"
+                    app:maxImageSize="24dp"
+                    app:elevation="8dp"
+                    app:fabCustomSize="36dp"
+                    android:id="@+id/imgEdit"
+                    android:tint="@color/colorTextPrimaryWithPrimaryBackground"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignBottom="@+id/imageView"
+
+                    android:layout_alignParentRight="true"
+                    android:scaleType="centerCrop"
+                     />
+
+
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/DefaultLabelStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_name"
+                android:textAllCaps="true" />
+
+            <TextView
+                android:id="@+id/txtName"
+                style="@style/DefaultFieldStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                tools:text="Mir Shahrukh Islam" />
+
+            <TextView
+                style="@style/DefaultLabelStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_email"
+                android:textAllCaps="true" />
+
+            <TextView
+                android:id="@+id/txtEmail"
+                style="@style/DefaultFieldStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                tools:text="shahrukh@singularitybd.com" />
+
+            <TextView
+                style="@style/DefaultLabelStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_mobile"
+                android:textAllCaps="true"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtMobile"
+                style="@style/DefaultFieldStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                tools:text="+01880123456" />
+
+            <TextView
+                android:id="@+id/txtLabelAddress"
+                style="@style/DefaultLabelStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_address" />
+
+            <TextView
+                android:id="@+id/txtAddress"
+                style="@style/DefaultFieldStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                tools:text="HOUSE #147, ROAD #1,\nBARIDHARA DOHS, DHAKA 1206" />
+
+            <View
+                style="@style/DefaultSeparator"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <Button
+                android:id="@+id/btnChangePassword"
+                style="@style/ButtonRoundedPrimary"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:drawableStart="@drawable/ic_key_wapper"
+                android:drawableLeft="@drawable/ic_key_wapper"
+                android:paddingStart="16dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="4dp"
+                android:text="@string/action_change_password"
+                android:textSize="18sp" />
+
+            <View
+                android:visibility="gone"
+                style="@style/DefaultSeparator"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="32dp" />
+
+            <TextView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="-32dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/card_background"
+                android:elevation="4dp"
+                android:paddingStart="16dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="8dp"
+                android:text="@string/label_billing" />
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btnBilling"
+                style="@style/ButtonRoundedPrimary"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:drawableStart="@drawable/ic_expense_wapper"
+                android:drawableLeft="@drawable/ic_expense_wapper"
+                android:paddingStart="16dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="4dp"
+                android:text="@string/action_pay_bills"
+                android:textSize="18sp" />
+
+            <View
+                android:visibility="gone"
+                android:id="@+id/dividerFeedback"
+                style="@style/DefaultSeparator"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="32dp" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/txtLabelFeedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="-32dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/card_background"
+                android:elevation="4dp"
+                android:paddingStart="16dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="8dp"
+                android:text="@string/label_feedback" />
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btnFeedbackList"
+                style="@style/ButtonRoundedPrimary"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+                android:drawableStart="@drawable/ic_note_wapper"
+                android:drawableLeft="@drawable/ic_note_wapper"
+                android:paddingStart="16dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="4dp"
+                android:text="@string/action_my_feedback"
+                android:textSize="18sp" />
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btnAddFeedback"
+                style="@style/ButtonRoundedPrimary"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:drawableStart="@drawable/ic_send_wapper"
+                android:drawableLeft="@drawable/ic_send_wapper"
+                android:paddingStart="16dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="4dp"
+                android:text="@string/action_send_feedback"
+                android:textSize="18sp" />
+
+
+            <View
+                android:visibility="gone"
+                style="@style/DefaultSeparator"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="-32dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/card_background"
+                android:elevation="4dp"
+                android:paddingStart="16dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="8dp"
+                android:text="@string/label_control" />
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btnRemoteEngineDisarm"
+                style="@style/ButtonRoundedPrimary"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+                android:drawableStart="@drawable/ic_lock_wapper_white"
+                android:drawableLeft="@drawable/ic_lock_wapper_white"
+                android:paddingStart="16dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="4dp"
+                android:text="@string/action_remote_engine_disarm"
+                android:textSize="18sp" />
+
+
+            <View
+                style="@style/DefaultSeparator"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp" />
+
+            <Button
+                android:id="@+id/btnLogout"
+                style="@style/ButtonRoundedPrimary"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"
+                android:drawableStart="@drawable/ic_logout_wapper"
+                android:drawableLeft="@drawable/ic_logout_wapper"
+                android:paddingStart="16dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="4dp"
+                android:text="@string/action_logout"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
